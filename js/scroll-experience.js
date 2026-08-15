@@ -16,6 +16,21 @@
         window.addEventListener('scroll', updateIndicator, { passive: true });
         window.addEventListener('resize', updateIndicator);
 
+        let lenisInstance = null;
+        if (window.Lenis && !reduceMotion) {
+            lenisInstance = new Lenis({ duration: 1.15, smoothWheel: true, smoothTouch: false });
+            gsap.ticker.add((time) => lenisInstance.raf(time * 1000));
+            gsap.ticker.lagSmoothing(0);
+        }
+
+        const scrollToTarget = (target) => {
+            if (lenisInstance) {
+                lenisInstance.scrollTo(target, { offset: 0, duration: 1.15 });
+            } else {
+                target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+            }
+        };
+
         const navigator = document.querySelector('.tf-scroll-indicator');
         const navStopsContainer = document.querySelector('.tf-nav-stops');
         const navLabel = document.querySelector('.tf-nav-label');
@@ -47,30 +62,64 @@
                 stop.className = 'tf-nav-stop';
                 stop.setAttribute('aria-label', `Go to ${label}`);
                 stop.innerHTML = `<span>${String(index).padStart(2, '0')}</span>`;
-                stop.addEventListener('click', () => section.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' }));
+                stop.addEventListener('click', () => scrollToTarget(section));
                 navStopsContainer.appendChild(stop);
             });
 
             activate(0);
-            const observer = new IntersectionObserver((entries) => {
-                const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-                if (visible) activate(sections.indexOf(visible.target));
-            }, { rootMargin: '-35% 0px -45% 0px', threshold: [0, 0.1, 0.5] });
-            sections.forEach((section) => observer.observe(section));
+
+            const updateActiveSection = () => {
+                const focusY = window.innerHeight * 0.45;
+                let activeIndex = 0;
+                let minDistance = Infinity;
+
+                sections.forEach((section, index) => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= focusY && rect.bottom >= focusY) {
+                        activeIndex = index;
+                        minDistance = 0;
+                    } else if (minDistance !== 0) {
+                        const dist = Math.min(Math.abs(rect.top - focusY), Math.abs(rect.bottom - focusY));
+                        if (dist < minDistance) {
+                            minDistance = dist;
+                            activeIndex = index;
+                        }
+                    }
+                });
+
+                activate(activeIndex);
+            };
+
+            window.addEventListener('scroll', updateActiveSection, { passive: true });
+            window.addEventListener('resize', updateActiveSection);
+            if (lenisInstance) {
+                lenisInstance.on('scroll', updateActiveSection);
+            }
+            updateActiveSection();
         }
+
+        // Handle internal hash anchor links with Lenis
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener('click', (e) => {
+                const hash = anchor.getAttribute('href');
+                if (!hash || hash === '#') return;
+                const target = document.querySelector(hash);
+                if (target) {
+                    e.preventDefault();
+                    scrollToTarget(target);
+                }
+            });
+        });
 
         if (!window.gsap || !window.ScrollTrigger || reduceMotion) return;
 
         gsap.registerPlugin(ScrollTrigger);
 
-        if (window.Lenis) {
-            const lenis = new Lenis({ duration: 1.15, smoothWheel: true, smoothTouch: false });
-            lenis.on('scroll', () => {
+        if (lenisInstance) {
+            lenisInstance.on('scroll', () => {
                 ScrollTrigger.update();
                 updateIndicator();
             });
-            gsap.ticker.add((time) => lenis.raf(time * 1000));
-            gsap.ticker.lagSmoothing(0);
         }
 
         // Keep the original understated section entrance everywhere on the site.
