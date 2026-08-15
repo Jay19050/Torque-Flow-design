@@ -16,7 +16,7 @@ include("header.php");
 
     <div class="hero-title tf-hero-copy" data-depth="0.16">
 
-        <h2>TORQUE FLOW TEST</h2>
+        <h2>TORQUE FLOW</h2>
 
         <p>Premium Vehicle Service</p>
 
