@@ -11,8 +11,17 @@ if(isset($_POST["btnlogin"]))
 
     if(mysqli_num_rows($res)>0)
     {
+        if(session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        $admin_row = mysqli_fetch_assoc($res);
+        $_SESSION['admin_logged_in'] = true;
+        $_SESSION['admin_email'] = $admin_row['email_id'];
+        $_SESSION['admin_id'] = $admin_row['admin_id'];
+
         echo "<script>";
         echo "alert('Admin Login Successful');";
+        echo "window.location.href='admin_dashboard.php';";
         echo "</script>";
     }
     else
