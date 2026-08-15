@@ -43,7 +43,7 @@ include 'header.php';
      TORQUE FLOW MARQUEE
 ========================================= -->
 
-<section class="about-marquee" aria-label="Torque Flow values">
+<div class="about-marquee" aria-label="Torque Flow values">
 
     <div class="marquee-track">
 
@@ -108,7 +108,7 @@ include 'header.php';
 
     </div>
 
-</section>
+</div>
 
 
     <!-- NEXT SECTION -->
@@ -157,18 +157,11 @@ include 'header.php';
 
     </section>
 
-    </section>
-
-
-
-
-    </section>
-
     <!-- =========================================
      TORQUE FLOW MARQUEE
 ========================================= -->
 
-    <section class="about-marquee" aria-label="Torque Flow values">
+    <div class="about-marquee" aria-label="Torque Flow values">
 
         <div class="marquee-track">
 
@@ -233,65 +226,63 @@ include 'header.php';
 
         </div>
 
-    </section>
+    </div>
 
     <section class="precision-section">
 
-        <section class="precision-section">
+        <div class="precision-container">
 
-            <div class="precision-container">
+            <!-- LEFT CONTENT -->
+            <div class="precision-content">
 
-                <!-- LEFT CONTENT -->
-                <div class="precision-content">
+                <div class="precision-number">02</div>
 
-                    <div class="precision-number">02</div>
-
-                    <div class="precision-label">
-                        PRECISION IN EVERY DETAIL
-                    </div>
-
-                    <h2>
-                        BUILT AROUND
-                        <span>YOUR CAR.</span>
-                    </h2>
-
-                    <p>
-                        Your vehicle is more than a machine. It is a reflection
-                        of performance, personality, and precision. That's why
-                        every Torque Flow service is approached with the same
-                        attention to detail we would give our own cars.
-                    </p>
-
-                    <div class="precision-meta">
-                        <span>EXPERTISE</span>
-                        <i>/</i>
-                        <span>TECHNOLOGY</span>
-                        <i>/</i>
-                        <span>CARE</span>
-                    </div>
-
+                <div class="precision-label">
+                    PRECISION IN EVERY DETAIL
                 </div>
 
+                <h2>
+                    BUILT AROUND
+                    <span>YOUR CAR.</span>
+                </h2>
 
-                <!-- RIGHT IMAGE -->
-                <div class="precision-image">
+                <p>
+                    Your vehicle is more than a machine. It is a reflection
+                    of performance, personality, and precision. That's why
+                    every Torque Flow service is approached with the same
+                    attention to detail we would give our own cars.
+                </p>
 
-                    <div class="precision-image-number">
-                        02
-                    </div>
-
-                    <img src="images/about-detail.png" alt="Precision automotive service at Torque Flow">
-
-                    <div class="precision-image-caption">
-                        <span>TORQUE FLOW</span>
-                        <span>PRECISION / 02</span>
-                    </div>
-
+                <div class="precision-meta">
+                    <span>EXPERTISE</span>
+                    <i>/</i>
+                    <span>TECHNOLOGY</span>
+                    <i>/</i>
+                    <span>CARE</span>
                 </div>
 
             </div>
 
-        </section>
+
+            <!-- RIGHT IMAGE -->
+            <div class="precision-image">
+
+                <div class="precision-image-number">
+                    02
+                </div>
+
+                <img src="images/about-detail.png" alt="Precision automotive service at Torque Flow">
+
+                <div class="precision-image-caption">
+                    <span>TORQUE FLOW</span>
+                    <span>PRECISION / 02</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 

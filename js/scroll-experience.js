@@ -39,7 +39,7 @@
         const cleanLabel = (value) => value.replace(/\s+/g, ' ').replace(/[.]/g, '').trim().slice(0, 30);
         const getLabel = (section, index) => {
             if (document.body.classList.contains('page-home')) return homeLabels[index] || `SECTION ${index + 1}`;
-            const source = section.querySelector('.section-tag, .section-label, .about-label, .contact-label, .standard-label, .precision-label, .services-section-number, h1, h2, .marquee-item');
+            const source = section.querySelector('.section-tag, .section-label, .about-label, .contact-label, .standard-label, .precision-label, .services-section-number, h1, h2');
             return cleanLabel(source?.textContent || `SECTION ${index + 1}`) || `SECTION ${index + 1}`;
         };
 
