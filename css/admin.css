@@ -578,8 +578,30 @@ a {
 }
 
 .panel-actions .btn-public-site {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: var(--tf-panel);
+    border: 1px solid var(--tf-line);
+    color: var(--tf-text);
+    font-family: var(--font-tech);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    line-height: 1;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+    transition: color .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+.panel-actions .btn-public-site:hover {
+    color: var(--tf-white);
+    background: var(--tf-panel-2);
+    border-color: var(--tf-accent);
 }
 
 /* ---------- TABLES ---------- */
