@@ -33,7 +33,7 @@ include 'header.php';
     <section class="services-overview" id="services-overview">
 
         <div class="services-overview-top">
-            <span class="services-section-number">02 / WHAT WE DO</span>
+            <span class="services-section-number">01 / WHAT WE DO</span>
         </div>
 
         <div class="services-overview-intro">
