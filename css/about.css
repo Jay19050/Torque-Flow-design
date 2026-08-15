@@ -1,0 +1,1182 @@
+/* =========================================
+   TORQUE FLOW — ABOUT PAGE
+   ========================================= */
+
+.about-page {
+  width: 100%;
+  background: #0d0d0d;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================================
+   ABOUT HERO
+   ========================================= */
+
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+
+  overflow: hidden;
+
+  background: #0d0d0d;
+}
+
+/* =========================================
+   HERO IMAGE
+   ========================================= */
+
+.about-hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../images/about-hero.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  transform: scale(1.02);
+}
+
+/* =========================================
+   DARK OVERLAY
+   ========================================= */
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.68) 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    rgba(0, 0, 0, 0.48) 100%
+  );
+
+  z-index: 1;
+}
+
+/* Additional bottom darkness */
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 40%;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   HUGE BACKGROUND WORD
+   ========================================= */
+
+.about-word {
+  position: absolute;
+
+  left: 50%;
+  top: 42%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+
+  font-size: clamp(150px, 22vw, 390px);
+
+  font-weight: 700;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.025em;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.28);
+
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+/* =========================================
+   HERO CONTENT
+   ========================================= */
+
+.about-hero-content {
+  position: absolute;
+
+  left: 8%;
+  bottom: 11%;
+
+  z-index: 4;
+
+  max-width: 650px;
+}
+
+/* ABOUT US */
+
+.about-label {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   MAIN HEADING
+   ========================================= */
+
+.about-hero-content h1 {
+  margin: 0;
+
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+
+  font-size: clamp(65px, 8vw, 130px);
+
+  font-weight: 700;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+}
+
+.about-hero-content h1 span {
+  color: #ffffff;
+}
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.about-hero-content p {
+  width: min(520px, 90vw);
+
+  margin: 30px 0 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* =========================================
+   SCROLL INDICATOR
+   ========================================= */
+
+.about-scroll {
+  position: absolute;
+
+  right: 3.5%;
+  bottom: 8%;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.about-scroll span {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.25em;
+
+  writing-mode: vertical-rl;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 70px;
+
+  background: linear-gradient(to bottom, #ff6b1a, rgba(255, 107, 26, 0));
+}
+
+/* =========================================
+   INTRO SECTION
+   ========================================= */
+
+.about-intro {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 1fr 2fr;
+
+  min-height: 650px;
+
+  padding: 140px 8%;
+
+  background: #0d0d0d;
+
+  color: #ffffff;
+}
+
+/* Number */
+
+.about-intro-number {
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+
+  font-size: 20px;
+
+  letter-spacing: 0.1em;
+
+  color: #ff6b1a;
+}
+
+/* Content */
+
+.about-intro-content {
+  max-width: 850px;
+}
+
+.section-label {
+  display: block;
+
+  margin-bottom: 30px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.25em;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.about-intro-content h2 {
+  margin: 0;
+
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+
+  font-size: clamp(70px, 9vw, 150px);
+
+  line-height: 0.82;
+
+  letter-spacing: -0.02em;
+}
+
+.about-intro-content h2 span {
+  color: #ff6b1a;
+}
+
+.about-intro-content p {
+  max-width: 620px;
+
+  margin-top: 50px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .about-hero {
+    min-height: 650px;
+  }
+
+  .about-word {
+    font-size: 25vw;
+  }
+
+  .about-hero-content {
+    left: 7%;
+    bottom: 12%;
+  }
+
+  .about-scroll {
+    right: 5%;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+    padding: 100px 7%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    height: 100svh;
+    min-height: 600px;
+  }
+
+  .about-word {
+    top: 38%;
+
+    font-size: 28vw;
+
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  }
+
+  .about-hero-image {
+    background-position: 58% center;
+  }
+
+  .about-hero-content {
+    left: 7%;
+    right: 7%;
+    bottom: 12%;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(60px, 18vw, 100px);
+  }
+
+  .about-hero-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-top: 22px;
+  }
+
+  .about-scroll {
+    display: none;
+  }
+}
+
+/* =========================================
+   SECTION 01
+   THE TORQUE FLOW STANDARD
+========================================= */
+
+.standard-section {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+
+/* -----------------------------------------
+   BACKGROUND IMAGE
+----------------------------------------- */
+
+.standard-image {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.standard-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.02);
+}
+
+/* -----------------------------------------
+   DARK OVERLAY
+----------------------------------------- */
+
+.standard-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.96) 0%,
+    rgba(0, 0, 0, 0.9) 38%,
+    rgba(0, 0, 0, 0.55) 62%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+
+/* -----------------------------------------
+   CONTENT
+----------------------------------------- */
+
+.standard-content {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  min-height: 900px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+/* -----------------------------------------
+   NUMBER
+----------------------------------------- */
+
+.standard-number {
+  margin-bottom: 28px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  color: #ff6b1a;
+}
+
+/* -----------------------------------------
+   LABEL
+----------------------------------------- */
+
+.standard-label {
+  margin-bottom: 22px;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  line-height: 1;
+
+  letter-spacing: 0.18em;
+
+  color: #ff6b1a;
+}
+
+/* -----------------------------------------
+   MAIN HEADING
+----------------------------------------- */
+
+.standard-content h2 {
+  max-width: 650px;
+
+  margin: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(75px, 9vw, 145px);
+  font-weight: 400;
+
+  line-height: 0.82;
+  letter-spacing: -0.025em;
+
+  color: #fff;
+}
+
+.standard-content h2 span {
+  display: block;
+
+  color: #ff6b1a;
+}
+
+/* -----------------------------------------
+   DESCRIPTION
+----------------------------------------- */
+
+.standard-content p {
+  max-width: 520px;
+
+  margin: 42px 0 0;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* -----------------------------------------
+   DIVIDER
+----------------------------------------- */
+
+.standard-divider {
+  width: 500px;
+  max-width: 100%;
+
+  height: 1px;
+
+  margin-top: 42px;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* -----------------------------------------
+   BOTTOM CAPTION
+----------------------------------------- */
+
+.standard-caption {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 18px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.25em;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.standard-caption b {
+  font-weight: 400;
+  color: #ff6b1a;
+}
+
+/* -----------------------------------------
+   HOVER
+----------------------------------------- */
+
+.standard-section:hover .standard-image img {
+  transform: scale(1.05);
+  transition: transform 1.2s ease;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .standard-section {
+    min-height: 800px;
+  }
+
+  .standard-content {
+    min-height: 800px;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .standard-content h2 {
+    font-size: clamp(70px, 12vw, 110px);
+  }
+
+  .standard-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.78) 60%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .standard-section {
+    min-height: 760px;
+  }
+
+  .standard-content {
+    min-height: 760px;
+    padding: 90px 7%;
+  }
+
+  .standard-number {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+
+  .standard-label {
+    font-size: 16px;
+    letter-spacing: 0.15em;
+  }
+
+  .standard-content h2 {
+    font-size: clamp(65px, 19vw, 95px);
+    line-height: 0.84;
+  }
+
+  .standard-content p {
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .standard-divider {
+    margin-top: 32px;
+  }
+
+  .standard-caption {
+    gap: 9px;
+    font-size: 8px;
+    letter-spacing: 0.16em;
+  }
+}
+
+/* =========================================
+   SECTION 02
+   FULL SCREEN IMAGE
+========================================= */
+
+.precision-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  background: #000;
+  color: #fff;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   FULL SCREEN IMAGE
+========================================= */
+
+.precision-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.precision-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter: grayscale(15%);
+
+  transform: scale(1.02);
+
+  transition: transform 1.2s ease;
+}
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.precision-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.94) 0%,
+    rgba(0, 0, 0, 0.78) 32%,
+    rgba(0, 0, 0, 0.38) 65%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+
+  z-index: 2;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.precision-container {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  min-height: 100vh;
+
+  max-width: none;
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 100px 8%;
+}
+
+/* =========================================
+   LEFT TEXT
+========================================= */
+
+.precision-content {
+  position: relative;
+
+  width: 55%;
+  max-width: 700px;
+
+  padding: 0;
+
+  z-index: 6;
+}
+
+/* NUMBER */
+
+.precision-number {
+  margin-bottom: 45px;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 20px;
+
+  letter-spacing: 0.12em;
+
+  color: #ff6b1a;
+}
+
+/* LABEL */
+
+.precision-label {
+  margin-bottom: 25px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* HEADING */
+
+.precision-content h2 {
+  margin: 0;
+
+  max-width: 700px;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(80px, 9vw, 145px);
+
+  font-weight: 400;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.025em;
+
+  color: #fff;
+}
+
+.precision-content h2 span {
+  display: block;
+
+  color: #ff6b1a;
+}
+
+/* PARAGRAPH */
+
+.precision-content p {
+  max-width: 520px;
+
+  margin: 42px 0 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================
+   META
+========================================= */
+
+.precision-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 50px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.precision-meta i {
+  font-style: normal;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   IMAGE NUMBER
+========================================= */
+
+.precision-image-number {
+  position: absolute;
+
+  top: 45px;
+  right: 6%;
+
+  z-index: 5;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 18px;
+
+  letter-spacing: 0.12em;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   IMAGE CAPTION
+========================================= */
+
+.precision-image-caption {
+  position: absolute;
+
+  left: 8%;
+  right: 8%;
+  bottom: 35px;
+
+  z-index: 5;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.precision-section:hover .precision-image img {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .precision-container {
+    padding: 100px 7%;
+  }
+
+  .precision-content {
+    width: 70%;
+  }
+
+  .precision-content h2 {
+    font-size: clamp(70px, 12vw, 115px);
+  }
+
+  .precision-image::after {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.7) 55%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .precision-section {
+    min-height: 100svh;
+  }
+
+  .precision-container {
+    min-height: 100svh;
+
+    padding: 90px 7%;
+  }
+
+  .precision-content {
+    width: 100%;
+  }
+
+  .precision-number {
+    margin-bottom: 35px;
+  }
+
+  .precision-content h2 {
+    font-size: clamp(65px, 18vw, 95px);
+  }
+
+  .precision-content p {
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    max-width: 430px;
+  }
+
+  .precision-meta {
+    margin-top: 35px;
+
+    font-size: 8px;
+
+    gap: 9px;
+  }
+
+  .precision-image-number {
+    top: 30px;
+    right: 7%;
+  }
+
+  .precision-image-caption {
+    left: 7%;
+    right: 7%;
+    bottom: 25px;
+
+    font-size: 7px;
+  }
+}
+
+/* =========================================
+   TORQUE FLOW MARQUEE
+========================================= */
+
+.about-marquee {
+    position: relative;
+
+    width: 100%;
+    height: 85px;
+
+    background: #0d0d0d;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    isolation: isolate;
+}
+
+
+/* =========================================
+   MOVING TRACK
+========================================= */
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    will-change: transform;
+
+    animation: torqueMarquee 30s linear infinite;
+}
+
+
+/* =========================================
+   MARQUEE TEXT
+========================================= */
+
+.marquee-item {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    margin-right: 40px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(42px, 5vw, 70px);
+
+    line-height: 1;
+
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   ORANGE SEPARATORS
+========================================= */
+
+.marquee-item span {
+    margin-left: 40px;
+
+    color: #ff6b1a;
+
+    font-size: 0.4em;
+}
+
+
+/* =========================================
+   EDGE FADE
+========================================= */
+
+.about-marquee::before,
+.about-marquee::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    width: 15%;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* LEFT FADE */
+
+.about-marquee::before {
+    left: 0;
+
+    background: linear-gradient(
+        90deg,
+        #0d0d0d 0%,
+        rgba(13, 13, 13, 0) 100%
+    );
+}
+
+
+/* RIGHT FADE */
+
+.about-marquee::after {
+    right: 0;
+
+    background: linear-gradient(
+        270deg,
+        #0d0d0d 0%,
+        rgba(13, 13, 13, 0) 100%
+    );
+}
+
+
+/* =========================================
+   MARQUEE ANIMATION
+========================================= */
+
+@keyframes torqueMarquee {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================
+   HOVER — PAUSE
+========================================= */
+
+.about-marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .about-marquee {
+        height: 65px;
+    }
+
+    .marquee-item {
+        font-size: 42px;
+
+        margin-right: 30px;
+    }
+
+    .marquee-item span {
+        margin-left: 30px;
+    }
+
+}

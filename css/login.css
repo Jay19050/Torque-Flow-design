@@ -1,0 +1,788 @@
+/* =========================================================
+   TORQUE FLOW — LOGIN PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE BASE
+   --------------------------------------------------------- */
+
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #0b0b0b;
+    color: #f4f4f4;
+
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN LOGIN SECTION
+   IMAGE LEFT / LOGIN RIGHT
+   --------------------------------------------------------- */
+
+.login-section {
+    position: relative;
+
+    /* Keep section below navbar */
+    margin-top: 90px;
+
+    min-height: calc(100vh - 90px);
+
+    display: grid;
+
+    grid-template-columns: 52% 48%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   LEFT SIDE — IMAGE
+   ========================================================= */
+
+.login-image {
+    position: relative;
+
+    min-height: 100%;
+
+    overflow: hidden;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    background:
+        url("../images/login.png")
+        center center / cover no-repeat;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE OVERLAY
+   --------------------------------------------------------- */
+
+.login-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.18),
+            rgba(0, 0, 0, 0.72)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.88),
+            transparent 60%
+        );
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE CONTENT
+   --------------------------------------------------------- */
+
+.login-image-content {
+    position: absolute;
+
+    z-index: 2;
+
+    inset: 0;
+
+    padding: 70px 8% 55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE TOP
+   --------------------------------------------------------- */
+
+.login-image-top span {
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE HEADING
+   --------------------------------------------------------- */
+
+.login-image-title h2 {
+    margin: 0;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: clamp(65px, 7vw, 125px);
+
+    font-weight: 900;
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE BOTTOM
+   --------------------------------------------------------- */
+
+.login-image-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.login-dot {
+    color: #ff6418;
+}
+
+
+/* =========================================================
+   RIGHT SIDE — LOGIN CONTAINER
+   ========================================================= */
+
+.login-container {
+    position: relative;
+
+    min-height: 100%;
+
+    padding: 110px 9% 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #101010;
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN INNER
+   --------------------------------------------------------- */
+
+.login-inner {
+    width: 100%;
+
+    max-width: 580px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   LOGIN HEADING
+   ========================================================= */
+
+.login-heading {
+    margin-bottom: 50px;
+}
+
+
+/* ---------------------------------------------------------
+   SECTION NUMBER
+   --------------------------------------------------------- */
+
+.login-number {
+    margin-bottom: 18px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN HEADING
+   --------------------------------------------------------- */
+
+.login-heading h1 {
+    margin: 0;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: clamp(60px, 5.5vw, 92px);
+
+    font-weight: 900;
+
+    line-height: 0.84;
+
+    letter-spacing: -4px;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------- */
+
+.login-heading p {
+    max-width: 420px;
+
+    margin: 28px 0 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* =========================================================
+   LOGIN FORM
+   ========================================================= */
+
+.login-form {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   FORM FIELD
+   --------------------------------------------------------- */
+
+.login-field {
+    position: relative;
+
+    margin-bottom: 32px;
+}
+
+
+/* ---------------------------------------------------------
+   FIELD LABEL
+   --------------------------------------------------------- */
+
+.login-field label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* ---------------------------------------------------------
+   INPUT
+   --------------------------------------------------------- */
+
+.login-field input {
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 0;
+
+    border: 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    color: #ffffff;
+
+    transition:
+        border-color 0.25s ease,
+        padding 0.25s ease;
+}
+
+
+/* ---------------------------------------------------------
+   INPUT FOCUS
+   --------------------------------------------------------- */
+
+.login-field input:focus {
+    padding-left: 8px;
+
+    border-bottom-color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   AUTOFILL
+   --------------------------------------------------------- */
+
+.login-field input:-webkit-autofill,
+.login-field input:-webkit-autofill:hover,
+.login-field input:-webkit-autofill:focus {
+
+    -webkit-text-fill-color: #ffffff;
+
+    transition:
+        background-color 5000s ease-in-out 0s;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.login-submit {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 60px;
+
+    margin-top: 12px;
+
+    padding: 0 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border: 1px solid #ff6418;
+
+    border-radius: 0;
+
+    background: #ff6418;
+
+    color: #0b0b0b;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTON HOVER
+   --------------------------------------------------------- */
+
+.login-submit:hover {
+    background: transparent;
+
+    color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTON ACTIVE
+   --------------------------------------------------------- */
+
+.login-submit:active {
+    transform: translateY(1px);
+}
+
+
+/* ---------------------------------------------------------
+   BUTTON ARROW
+   --------------------------------------------------------- */
+
+.login-arrow {
+    font-size: 21px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.login-submit:hover .login-arrow {
+    transform:
+        translate(5px, -5px);
+}
+
+
+/* =========================================================
+   REGISTER LINK
+   ========================================================= */
+
+.login-register {
+    width: 100%;
+
+    margin-top: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   REGISTER TEXT
+   --------------------------------------------------------- */
+
+.login-register > span {
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ---------------------------------------------------------
+   REGISTER LINK
+   --------------------------------------------------------- */
+
+.login-register a {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   REGISTER UNDERLINE
+   --------------------------------------------------------- */
+
+.login-register a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -6px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #ff6418;
+
+    transition:
+        width 0.25s ease;
+}
+
+
+.login-register a:hover::after {
+    width: calc(100% - 18px);
+}
+
+
+/* ---------------------------------------------------------
+   REGISTER ARROW
+   --------------------------------------------------------- */
+
+.login-register a span {
+    color: #ff6418;
+
+    font-size: 14px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.login-register a:hover span {
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+   ========================================================= */
+
+.login-page ::selection {
+    background: #ff6418;
+
+    color: #0b0b0b;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .login-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* IMAGE FIRST */
+
+    .login-image {
+        grid-column: 1;
+
+        grid-row: 1;
+
+        min-height: 650px;
+    }
+
+
+    /* LOGIN SECOND */
+
+    .login-container {
+        grid-column: 1;
+
+        grid-row: 2;
+
+        min-height: 650px;
+
+        padding:
+            100px
+            8%
+            80px;
+
+        border-left: 0;
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.12);
+    }
+
+
+    .login-inner {
+        max-width: 650px;
+    }
+
+
+    .login-image-title h2 {
+        font-size: 100px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       IMAGE
+       ----------------------------------------------------- */
+
+    .login-image {
+        min-height: 500px;
+    }
+
+
+    .login-image-content {
+        padding:
+            55px
+            25px
+            40px;
+    }
+
+
+    .login-image-title h2 {
+        font-size: 70px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .login-image-bottom {
+        gap: 7px;
+
+        font-size: 7px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGIN
+       ----------------------------------------------------- */
+
+    .login-container {
+        min-height: auto;
+
+        padding:
+            75px
+            25px
+            80px;
+    }
+
+
+    .login-heading {
+        margin-bottom: 42px;
+    }
+
+
+    .login-heading h1 {
+        font-size: 58px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .login-heading p {
+        font-size: 13px;
+    }
+
+
+    /* -----------------------------------------------------
+       REGISTER LINK
+       ----------------------------------------------------- */
+
+    .login-register {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    /* -----------------------------------------------------
+       IMAGE
+       ----------------------------------------------------- */
+
+    .login-image {
+        min-height: 430px;
+    }
+
+
+    .login-image-content {
+        padding:
+            45px
+            20px
+            35px;
+    }
+
+
+    .login-image-title h2 {
+        font-size: 58px;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGIN
+       ----------------------------------------------------- */
+
+    .login-container {
+        padding:
+            65px
+            20px
+            70px;
+    }
+
+
+    .login-heading h1 {
+        font-size: 50px;
+    }
+
+}

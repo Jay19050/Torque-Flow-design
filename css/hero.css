@@ -1,0 +1,224 @@
+/* ---------- HEADER ---------- */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 35px 70px;
+
+  background: transparent;
+}
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+}
+
+nav {
+  display: flex;
+  gap: 45px;
+}
+
+nav a {
+  font-size: 13px;
+  letter-spacing: 3px;
+  position: relative;
+  transition: 0.4s;
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #ff6a2a;
+
+  transition: 0.4s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url("../images/hero.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+/* car */
+
+.car {
+  position: relative;
+
+  width: 85%;
+
+  max-width: 1200px;
+
+  z-index: 5;
+
+  animation: zoom 12s infinite alternate;
+}
+
+/* bottom title */
+
+.hero-title {
+  position: absolute;
+
+  bottom: 70px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  text-align: center;
+}
+
+.hero-title h2 {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 60px;
+
+  letter-spacing: 8px;
+}
+
+.hero-title p {
+  font-size: 16px;
+
+  color: #d0d0d0;
+
+  letter-spacing: 4px;
+}
+
+/* scroll */
+
+.scroll {
+  position: absolute;
+
+  right: 45px;
+
+  bottom: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  letter-spacing: 3px;
+
+  font-size: 12px;
+}
+
+/* animation */
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1000px) {
+  header {
+    padding: 25px 30px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  .background-text {
+    font-size: 120px;
+  }
+
+  .hero-title h2 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .background-text {
+    font-size: 70px;
+
+    top: 30%;
+  }
+
+  .car {
+    width: 100%;
+  }
+
+  .hero-title {
+    bottom: 100px;
+  }
+}
+
+.standard-section {
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+}
+
+.standard-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}   

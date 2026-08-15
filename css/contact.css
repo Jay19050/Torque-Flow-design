@@ -1,0 +1,747 @@
+/* =========================================================
+   TORQUE FLOW — CONTACT PAGE
+========================================================= */
+
+.contact-page {
+    width: 100%;
+    background: #0d0d0d;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION 01 — HERO
+========================================================= */
+
+.contact-hero {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background: #0d0d0d;
+}
+
+
+.contact-hero-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../images/contact-hero.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    transform: scale(1.02);
+
+    z-index: 0;
+}
+
+
+.contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(0, 0, 0, 0.42) 50%,
+            rgba(0, 0, 0, 0.60) 100%
+        );
+
+    z-index: 1;
+}
+
+
+.contact-hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 45%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.82),
+            transparent
+        );
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* HERO TOP */
+
+.contact-hero-top {
+    position: absolute;
+
+    top: 130px;
+    left: 8%;
+    right: 8%;
+
+    z-index: 4;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contact-number {
+    color: #ff6b1a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.contact-label {
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 0.3em;
+}
+
+
+/* HERO CONTENT */
+
+.contact-hero-content {
+    position: absolute;
+
+    left: 8%;
+    bottom: 12%;
+
+    z-index: 4;
+
+    max-width: 1000px;
+}
+
+
+.contact-eyebrow {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #ff6b1a;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.3em;
+}
+
+
+.contact-hero-content h1 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(70px, 9vw, 145px);
+
+    font-weight: 700;
+
+    line-height: 0.82;
+
+    letter-spacing: -0.015em;
+
+    color: #ffffff;
+}
+
+
+.contact-hero-content h1 span {
+    color: #ff6b1a;
+}
+
+
+.contact-hero-content p {
+    width: min(520px, 90vw);
+
+    margin-top: 35px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 300;
+
+    line-height: 1.8;
+}
+
+
+/* SCROLL */
+
+.contact-scroll {
+    position: absolute;
+
+    right: 3.5%;
+    bottom: 8%;
+
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.contact-scroll span {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 0.25em;
+
+    writing-mode: vertical-rl;
+}
+
+
+.contact-scroll-line {
+    width: 1px;
+    height: 70px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ff6b1a,
+            rgba(255, 107, 26, 0)
+        );
+}
+
+
+/* =========================================================
+   SECTION 02 — CONTACT DETAILS
+========================================================= */
+
+.contact-details {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 12% 88%;
+
+    min-height: 700px;
+
+    padding: 120px 8%;
+
+    background: #0d0d0d;
+}
+
+
+.contact-details-number {
+    color: #ff6b1a;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.contact-details-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+
+.section-label {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #ff6b1a;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.3em;
+}
+
+
+.contact-details-heading h2 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(65px, 7vw, 120px);
+
+    line-height: 0.85;
+
+    letter-spacing: -0.01em;
+}
+
+
+.contact-details-heading h2 span {
+    color: #ff6b1a;
+}
+
+
+.contact-information {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 65px;
+}
+
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.contact-info-label {
+    color: #666;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.contact-info-item a {
+    width: fit-content;
+
+    color: #ffffff;
+
+    font-size: 17px;
+    font-weight: 400;
+
+    transition: color 0.3s ease;
+}
+
+
+.contact-info-item a:hover {
+    color: #ff6b1a;
+}
+
+
+.contact-socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+
+.contact-socials a {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SECTION 03 — CONTACT FORM
+========================================================= */
+
+.contact-form-section {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 12% 88%;
+
+    padding: 130px 8%;
+
+    background: #111111;
+}
+
+
+.contact-form-number {
+    color: #ff6b1a;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.contact-form-wrapper {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+}
+
+
+.contact-form-heading h2 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(60px, 6vw, 105px);
+
+    line-height: 0.86;
+
+    letter-spacing: -0.01em;
+}
+
+
+.contact-form-heading h2 span {
+    color: #ff6b1a;
+}
+
+
+.contact-form-heading p {
+    max-width: 430px;
+
+    margin-top: 30px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+
+.contact-form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.contact-field label {
+    color: #666;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+    width: 100%;
+
+    padding: 16px 0;
+
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.3s ease;
+}
+
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #555;
+}
+
+
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+    border-bottom-color: #ff6b1a;
+}
+
+
+.contact-field select {
+    cursor: pointer;
+}
+
+
+.contact-field select option {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+.contact-field textarea {
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+
+.contact-submit {
+    width: fit-content;
+
+    margin-top: 10px;
+
+    padding: 16px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.2em;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+
+.contact-submit span {
+    margin-left: 12px;
+
+    color: #ff6b1a;
+
+    font-size: 17px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.contact-submit:hover {
+    color: #ff6b1a;
+}
+
+
+.contact-submit:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   SECTION 04 — LOCATION
+========================================================= */
+
+.contact-location {
+    width: 100%;
+
+    background: #0d0d0d;
+}
+
+
+.contact-location-image {
+    position: relative;
+
+    min-height: 650px;
+
+    background-image: url("../images/contact-location.png");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+.contact-location-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.3)
+        );
+}
+
+
+.contact-location-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 120px 8%;
+}
+
+
+.contact-location-content h2 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(70px, 8vw, 135px);
+
+    line-height: 0.82;
+}
+
+
+.contact-location-content h2 span {
+    color: #ff6b1a;
+}
+
+
+.contact-location-info {
+    margin-top: 45px;
+}
+
+
+.contact-location-info p {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 0.15em;
+}
+
+
+.contact-location-info span {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #777;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 0.3em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-details {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact-details-content {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .contact-form-section {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact-form-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .contact-hero {
+        min-height: 750px;
+    }
+
+    .contact-hero-top {
+        top: 110px;
+
+        left: 6%;
+        right: 6%;
+    }
+
+    .contact-hero-content {
+        left: 6%;
+        bottom: 12%;
+    }
+
+    .contact-hero-content h1 {
+        font-size: 17vw;
+
+        letter-spacing: -2px;
+    }
+
+    .contact-scroll {
+        display: none;
+    }
+
+    .contact-details,
+    .contact-form-section {
+        padding: 90px 6%;
+    }
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-information {
+        gap: 45px;
+    }
+
+    .contact-location-content {
+        padding: 90px 6%;
+    }
+
+}

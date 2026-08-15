@@ -1,0 +1,2752 @@
+/* =========================================
+   GLOBAL RESET
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0d0d;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100px;
+
+  padding: 0 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+
+  color: #ffffff;
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.logo {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 30px;
+
+  letter-spacing: 3px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+  display: flex;
+  align-items: center;
+
+  gap: 42px;
+}
+
+nav a {
+  position: relative;
+
+  display: inline-block;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  padding-bottom: 8px;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================================
+   TORQUE FLOW FOOTER
+========================================= */
+
+.site-footer {
+  position: relative;
+  width: 100%;
+  background: #080808;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================================
+   FOOTER MAIN
+========================================= */
+
+.footer-main {
+  display: grid;
+
+  grid-template-columns:
+    2.2fr
+    1fr
+    1.35fr
+    1fr;
+
+  gap: 90px;
+
+  padding: 95px 8% 100px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   COLUMNS
+========================================= */
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  min-width: 0;
+}
+
+/* =========================================
+   COLUMN LABEL
+========================================= */
+
+.footer-column-label {
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.25em;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.footer-about p {
+  max-width: 310px;
+
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.48);
+}
+
+/* =========================================
+   FOUNDERS
+========================================= */
+
+.footer-founders {
+  margin-top: 48px;
+}
+
+.footer-founders .footer-column-label {
+  margin-bottom: 14px;
+}
+
+.founder-names {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  white-space: nowrap;
+}
+
+.founder-names i {
+  font-style: normal;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+.footer-column a {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-column a:hover {
+  color: #ff6b1a;
+
+  transform: translateX(4px);
+}
+
+/* =========================================
+   BOTTOM BAR
+========================================= */
+
+.footer-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 24px 8%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .footer-main {
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 65px 50px;
+
+    padding: 75px 7% 80px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    padding: 65px 7% 70px;
+  }
+
+  .footer-founders {
+    margin-top: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    padding: 22px 7%;
+  }
+}
+
+/* =========================================
+   HOME SECTION 01
+   WHY TORQUE FLOW
+========================================= */
+
+.home-standard {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 900px;
+
+  background: #0d0d0d;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   INNER
+========================================= */
+
+.home-standard-inner {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 900px;
+
+  padding: 100px 8% 90px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+/* =========================================
+   SECTION NUMBER
+========================================= */
+
+.home-standard-number {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 20px;
+
+  letter-spacing: 0.12em;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.home-standard-heading {
+  margin-top: 80px;
+
+  max-width: 850px;
+}
+
+.home-standard-label {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.home-standard-heading h2 {
+  margin: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(90px, 12vw, 175px);
+
+  font-weight: 400;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.025em;
+
+  color: #ffffff;
+}
+
+.home-standard-heading h2 span {
+  color: #ff6b1a;
+}
+
+.home-standard-heading p {
+  max-width: 470px;
+
+  margin-top: 42px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 300;
+
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.52);
+}
+
+/* =========================================
+   PRINCIPLES
+========================================= */
+
+.home-standard-points {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 0;
+
+  margin-top: 100px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.home-standard-point {
+  display: grid;
+
+  grid-template-columns: 35px 1fr;
+
+  gap: 25px;
+
+  min-height: 190px;
+
+  padding: 30px 40px 0 0;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.home-standard-point:not(:first-child) {
+  padding-left: 40px;
+}
+
+.home-standard-point:last-child {
+  border-right: none;
+}
+
+/* =========================================
+   POINT NUMBER
+========================================= */
+
+.point-number {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 14px;
+
+  letter-spacing: 0.1em;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   POINT HEADING
+========================================= */
+
+.home-standard-point h3 {
+  margin: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 30px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+/* =========================================
+   POINT TEXT
+========================================= */
+
+.home-standard-point p {
+  max-width: 240px;
+
+  margin-top: 15px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  transition: color 0.3s ease;
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.home-standard-point {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.home-standard-point:hover {
+  transform: translateY(-5px);
+}
+
+.home-standard-point:hover p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .home-standard-inner {
+    padding: 85px 7%;
+  }
+
+  .home-standard-heading {
+    margin-top: 70px;
+  }
+
+  .home-standard-heading h2 {
+    font-size: clamp(80px, 13vw, 130px);
+  }
+
+  .home-standard-points {
+    grid-template-columns: 1fr;
+
+    margin-top: 80px;
+  }
+
+  .home-standard-point,
+  .home-standard-point:not(:first-child) {
+    grid-template-columns: 35px 1fr;
+
+    padding: 28px 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .home-standard-point:last-child {
+    border-bottom: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .home-standard {
+    min-height: auto;
+  }
+
+  .home-standard-inner {
+    min-height: auto;
+
+    padding: 70px 7% 75px;
+  }
+
+  .home-standard-heading {
+    margin-top: 60px;
+  }
+
+  .home-standard-heading h2 {
+    font-size: clamp(70px, 20vw, 105px);
+  }
+
+  .home-standard-heading p {
+    margin-top: 32px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+  }
+
+  .home-standard-points {
+    margin-top: 65px;
+  }
+
+  .home-standard-point h3 {
+    font-size: 27px;
+  }
+}
+
+/* =========================================
+   HOME SECTION 02
+   SERVICE CATEGORIES
+========================================= */
+
+.home-services {
+  position: relative;
+
+  width: 100%;
+
+  background: #080808;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.home-services-inner {
+  width: 100%;
+
+  padding: 120px 8% 130px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.home-services-header {
+  display: grid;
+
+  grid-template-columns: 120px 1fr;
+
+  gap: 60px;
+
+  margin-bottom: 110px;
+}
+
+.home-services-number {
+  padding-top: 8px;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: 20px;
+
+  letter-spacing: 0.12em;
+
+  color: #ff6b1a;
+}
+
+.home-services-heading {
+  max-width: 900px;
+}
+
+.home-services-label {
+  display: block;
+
+  margin-bottom: 25px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.home-services-heading h2 {
+  margin: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(80px, 11vw, 165px);
+
+  font-weight: 400;
+
+  line-height: 0.78;
+
+  letter-spacing: -0.025em;
+}
+
+.home-services-heading h2 span {
+  color: #ff6b1a;
+}
+
+/* =========================================
+   SERVICE LIST
+========================================= */
+
+.home-service-list {
+  width: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.home-service-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 90px 1.6fr 1fr 60px;
+
+  align-items: center;
+
+  min-height: 145px;
+
+  padding: 0 25px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    background 0.35s ease,
+    padding 0.35s ease;
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.service-item-number {
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  color: #ff6b1a;
+}
+
+/* =========================================
+   NAME
+========================================= */
+
+.service-item-name {
+  font-family: "Bebas Neue", sans-serif;
+
+  font-size: clamp(42px, 5vw, 70px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.01em;
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.service-item-description {
+  max-width: 250px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 300;
+
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  transition: color 0.35s ease;
+}
+
+/* =========================================
+   ARROW
+========================================= */
+
+.service-item-arrow {
+  justify-self: end;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 300;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.home-service-item:hover {
+  padding-left: 40px;
+
+  background: #111111;
+}
+
+.home-service-item:hover .service-item-name {
+  color: #ff6b1a;
+
+  transform: translateX(8px);
+}
+
+.home-service-item:hover .service-item-description {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.home-service-item:hover .service-item-arrow {
+  color: #ff6b1a;
+
+  transform: translate(5px, -5px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .home-services-inner {
+    padding: 90px 7% 100px;
+  }
+
+  .home-services-header {
+    grid-template-columns: 60px 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 80px;
+  }
+
+  .home-services-heading h2 {
+    font-size: clamp(70px, 12vw, 120px);
+  }
+
+  .home-service-item {
+    grid-template-columns: 60px 1.5fr 1fr 40px;
+
+    min-height: 125px;
+
+    padding: 0 15px;
+  }
+
+  .service-item-description {
+    padding-left: 20px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .home-services-inner {
+    padding: 70px 7% 80px;
+  }
+
+  .home-services-header {
+    display: block;
+
+    margin-bottom: 65px;
+  }
+
+  .home-services-number {
+    margin-bottom: 50px;
+  }
+
+  .home-services-heading h2 {
+    font-size: clamp(65px, 19vw, 100px);
+  }
+
+  .home-service-item {
+    grid-template-columns: 40px 1fr 35px;
+
+    min-height: 110px;
+
+    padding: 0 5px;
+  }
+
+  .service-item-description {
+    display: none;
+  }
+
+  .service-item-name {
+    font-size: 40px;
+  }
+
+  .service-item-arrow {
+    font-size: 20px;
+  }
+
+  .home-service-item:hover {
+    padding-left: 15px;
+  }
+}
+
+
+
+/* =========================================
+   HOME SECTION 03
+   TORQUE FLOW BY THE NUMBERS
+========================================= */
+
+.home-stats {
+    position: relative;
+    width: 100%;
+    background: #111111;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+
+.home-stats-inner {
+    width: 100%;
+    padding: 110px 8% 120px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.home-stats-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 70px;
+
+    width: 100%;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.home-stats-number {
+    flex-shrink: 0;
+
+    order: 1;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+
+    color: #ff6b1a;
+}
+
+
+.home-stats-label {
+    order: 2;
+
+    padding-top: 3px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 0.28em;
+
+    color: rgba(255, 255, 255, 0.40);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.home-stats-intro {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 90px 0 110px;
+}
+
+
+.home-stats-intro h2 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(90px, 12vw, 175px);
+    font-weight: 400;
+
+    line-height: 0.76;
+    letter-spacing: -0.025em;
+
+    color: #ffffff;
+}
+
+
+.home-stats-intro h2 span {
+    color: #ff6b1a;
+}
+
+
+.home-stats-intro p {
+    max-width: 300px;
+
+    margin: 0 0 8px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================
+   STATS GRID
+========================================= */
+
+.home-stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.home-stat {
+    min-height: 230px;
+
+    padding: 45px 35px 40px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.home-stat:first-child {
+    padding-left: 0;
+}
+
+
+.home-stat:last-child {
+    border-right: none;
+}
+
+
+.home-stat:hover {
+    background: #151515;
+
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   STAT VALUE
+========================================= */
+
+.home-stat-value {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(65px, 7vw, 105px);
+    font-weight: 400;
+
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+
+    color: #ffffff;
+}
+
+
+.home-stat:nth-child(2) .home-stat-value,
+.home-stat:nth-child(4) .home-stat-value {
+    color: #ff6b1a;
+}
+
+
+/* =========================================
+   STAT LABEL
+========================================= */
+
+.home-stat-label {
+    margin-top: 28px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    letter-spacing: 0.22em;
+
+    color: rgba(255, 255, 255, 0.38);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .home-stats-inner {
+        padding: 90px 7% 100px;
+    }
+
+
+    .home-stats-header {
+        gap: 45px;
+    }
+
+
+    .home-stats-intro {
+        padding: 75px 0 85px;
+    }
+
+
+    .home-stats-intro h2 {
+        font-size: clamp(75px, 13vw, 125px);
+    }
+
+
+    .home-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .home-stat {
+        min-height: 200px;
+
+        padding: 35px 30px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+
+    .home-stat:nth-child(2) {
+        border-right: none;
+    }
+
+
+    .home-stat:nth-child(3),
+    .home-stat:nth-child(4) {
+        border-bottom: none;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .home-stats-inner {
+        padding: 70px 7% 75px;
+    }
+
+
+    .home-stats-header {
+        gap: 25px;
+    }
+
+
+    .home-stats-number {
+        font-size: 18px;
+    }
+
+
+    .home-stats-label {
+        font-size: 8px;
+
+        letter-spacing: 0.20em;
+    }
+
+
+    .home-stats-intro {
+        display: block;
+
+        padding: 65px 0 70px;
+    }
+
+
+    .home-stats-intro h2 {
+        font-size: clamp(70px, 20vw, 105px);
+    }
+
+
+    .home-stats-intro p {
+        margin-top: 35px;
+    }
+
+
+    .home-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .home-stat,
+    .home-stat:first-child {
+        min-height: auto;
+
+        padding: 35px 0;
+
+        border-right: none;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+
+    .home-stat:last-child {
+        border-bottom: none;
+    }
+
+
+    .home-stat-value {
+        font-size: 75px;
+    }
+
+}
+
+/* =========================================================
+   HOME — SECTION 04
+   FEATURED SERVICES — STATIC CARDS
+   ========================================================= */
+
+.home-featured {
+    position: relative;
+    width: 100%;
+    background: #0b0b0b;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTION CONTAINER
+   ========================================================= */
+
+.home-featured-inner {
+    width: 100%;
+    padding: 120px 8% 130px;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+   ========================================================= */
+
+.home-featured-header {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 60px;
+    margin-bottom: 90px;
+}
+
+
+.home-featured-number {
+    padding-top: 8px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 0.18em;
+
+    color: #ff6b1a;
+}
+
+
+.home-featured-title {
+    max-width: 900px;
+}
+
+
+.home-featured-label {
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 0.30em;
+
+    color: rgba(255, 255, 255, 0.42);
+}
+
+
+.home-featured-title h2 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(90px, 11vw, 170px);
+    font-weight: 400;
+
+    line-height: 0.78;
+    letter-spacing: -0.025em;
+
+    color: #ffffff;
+}
+
+
+.home-featured-title h2 span {
+    color: #ff6b1a;
+}
+
+
+/* =========================================================
+   SERVICE GRID
+   ========================================================= */
+
+.home-featured-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100%;
+    min-height: 600px;
+
+    gap: 2px;
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+   ========================================================= */
+
+.featured-service {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    min-width: 0;
+    min-height: 600px;
+
+    padding: 42px;
+
+    background: #151515;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        background 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD BACKGROUNDS
+   ========================================================= */
+
+.featured-service:nth-child(1) {
+    background:
+        linear-gradient(
+            145deg,
+            #181818 0%,
+            #101010 100%
+        );
+}
+
+
+.featured-service:nth-child(2) {
+    background:
+        linear-gradient(
+            145deg,
+            #161616 0%,
+            #111111 100%
+        );
+}
+
+
+.featured-service:nth-child(3) {
+    background:
+        linear-gradient(
+            145deg,
+            #151515 0%,
+            #0e0e0e 100%
+        );
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.featured-service:hover {
+    background: #191919;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   ORANGE ACCENT LINE
+   ========================================================= */
+
+.featured-service::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background: #ff6b1a;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.featured-service-content {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    max-width: 430px;
+}
+
+
+.featured-service-content > span {
+    display: block;
+
+    margin-bottom: 26px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.20em;
+
+    color: #ff6b1a;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SERVICE TITLE
+   ========================================================= */
+
+.featured-service-content h3 {
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(48px, 5vw, 76px);
+    font-weight: 400;
+
+    line-height: 0.84;
+
+    letter-spacing: -0.015em;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.featured-service-content p {
+    max-width: 300px;
+
+    margin: 28px 0 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 10px;
+    font-weight: 300;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.43);
+}
+
+
+/* =========================================================
+   EXPLORE LINK
+   ========================================================= */
+
+.featured-service-content strong {
+    display: inline-block;
+
+    margin-top: 34px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.20em;
+
+    color: #ffffff;
+
+    transition: color 0.3s ease;
+}
+
+
+.featured-service:hover .featured-service-content strong {
+    color: #ff6b1a;
+}
+
+
+/* =========================================================
+   EXTRA LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .home-featured-inner {
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .featured-service {
+        min-height: 650px;
+        padding: 48px;
+    }
+
+    .home-featured-grid {
+        min-height: 650px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .home-featured-inner {
+        padding: 100px 7% 110px;
+    }
+
+    .home-featured-header {
+        grid-template-columns: 80px 1fr;
+        gap: 35px;
+        margin-bottom: 70px;
+    }
+
+    .home-featured-title h2 {
+        font-size: clamp(75px, 11vw, 120px);
+    }
+
+    .home-featured-grid {
+        min-height: 520px;
+    }
+
+    .featured-service {
+        min-height: 520px;
+        padding: 32px;
+    }
+
+    .featured-service-content h3 {
+        font-size: 52px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .home-featured-inner {
+        padding: 75px 6% 85px;
+    }
+
+    .home-featured-header {
+        display: block;
+        margin-bottom: 55px;
+    }
+
+    .home-featured-number {
+        margin-bottom: 45px;
+    }
+
+    .home-featured-label {
+        margin-bottom: 20px;
+    }
+
+    .home-featured-title h2 {
+        font-size: clamp(70px, 19vw, 105px);
+        line-height: 0.82;
+    }
+
+    .home-featured-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 2px;
+    }
+
+    .featured-service {
+        min-height: 420px;
+        padding: 30px;
+    }
+
+    .featured-service-content h3 {
+        font-size: 56px;
+    }
+
+    .featured-service-content p {
+        max-width: 270px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .home-featured-inner {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .featured-service {
+        min-height: 380px;
+        padding: 26px;
+    }
+
+    .featured-service-content h3 {
+        font-size: 50px;
+    }
+
+}
+
+/* =========================================================
+   SECTION 04 — SERVICE IMAGES
+   ========================================================= */
+
+.featured-service {
+    position: relative;
+    overflow: hidden;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   IMAGE LAYER
+   ========================================================= */
+
+.featured-service::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 5, 5, 0.82) 0%,
+            rgba(5, 5, 5, 0.45) 42%,
+            rgba(5, 5, 5, 0.18) 75%,
+            rgba(5, 5, 5, 0.08) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   PERFORMANCE
+   ========================================================= */
+
+.featured-service:nth-child(1) {
+    background-image: url("../images/performance.png");
+
+    background-position: center center;
+}
+
+
+/* =========================================================
+   MAINTENANCE
+   ========================================================= */
+
+.featured-service:nth-child(2) {
+    background-image: url("../images/maintenance.png");
+
+    background-position: center center;
+}
+
+
+/* =========================================================
+   DIAGNOSTICS
+   ========================================================= */
+
+.featured-service:nth-child(3) {
+    background-image: url("../images/diagnostics.png");
+
+    background-position: center center;
+}
+
+
+/* =========================================================
+   KEEP CONTENT ABOVE IMAGE
+   ========================================================= */
+
+.featured-service-content {
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   ORANGE SIDE ACCENT
+   ========================================================= */
+
+.featured-service::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 2px;
+    height: 100%;
+
+    z-index: 4;
+
+    background: #ff6b1a;
+
+    opacity: 0.9;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   SUBTLE HOVER — NO SLIDING
+   ========================================================= */
+
+.featured-service {
+    transition: background-color 0.35s ease;
+}
+
+
+/* Slightly reveal the photograph when hovering */
+
+.featured-service:hover::after {
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 5, 5, 0.72) 0%,
+            rgba(5, 5, 5, 0.35) 42%,
+            rgba(5, 5, 5, 0.12) 75%,
+            rgba(5, 5, 5, 0.05) 100%
+        );
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.featured-service-content > span {
+    color: #ff6b1a;
+}
+
+.featured-service-content h3 {
+    color: #ffffff;
+}
+
+.featured-service-content p {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.featured-service-content strong {
+    color: #ffffff;
+}
+
+.featured-service:hover .featured-service-content strong {
+    color: #ff6b1a;
+}
+
+/* =========================================
+   SECTION 05 — THE TORQUE FLOW STANDARD
+========================================= */
+
+.section-five {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #080808;
+    color: #fff;
+    padding: 120px 8vw 140px;
+    overflow: hidden;
+}
+
+
+/* HEADER */
+
+.section-five-header {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 70px;
+}
+
+.section-five-number {
+    color: #ff5a00;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-five-label {
+    color: #777;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+
+/* MAIN CONTENT */
+
+.section-five-content {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 7vw;
+    align-items: center;
+}
+
+
+/* LEFT SIDE */
+
+.section-five-copy {
+    max-width: 560px;
+}
+
+.section-five-eyebrow {
+    display: block;
+    margin-bottom: 25px;
+
+    color: #ff5a00;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-five-copy h2 {
+    margin: 0;
+
+    font-size: clamp(70px, 7vw, 125px);
+    line-height: 0.84;
+    font-weight: 900;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+}
+
+.section-five-copy h2 span {
+    color: #ff5a00;
+}
+
+.section-five-copy p {
+    max-width: 500px;
+    margin-top: 45px;
+
+    color: #858585;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* BUTTON */
+
+.section-five-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+
+    margin-top: 45px;
+    padding: 18px 22px;
+
+    min-width: 190px;
+
+    border: 1px solid #ff5a00;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease;
+}
+
+.section-five-button span {
+    color: #ff5a00;
+    font-size: 18px;
+}
+
+.section-five-button:hover {
+    background: #ff5a00;
+    color: #000;
+}
+
+.section-five-button:hover span {
+    color: #000;
+}
+
+
+/* IMAGE */
+
+.section-five-image {
+    position: relative;
+
+    width: 100%;
+    height: 650px;
+
+    overflow: hidden;
+    background: #111;
+}
+
+.section-five-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.25),
+            transparent 45%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.65),
+            transparent 35%
+        );
+
+    pointer-events: none;
+}
+
+.section-five-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter: brightness(0.78);
+}
+
+
+/* IMAGE FOOTER */
+
+.section-five-image-caption {
+    position: absolute;
+    z-index: 2;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 25px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    color: #aaa;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* ORANGE DETAIL */
+
+.section-five-image-caption span:first-child {
+    color: #ff5a00;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .section-five {
+        padding: 90px 6vw 100px;
+    }
+
+    .section-five-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .section-five-copy {
+        max-width: 700px;
+    }
+
+    .section-five-image {
+        height: 550px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section-five {
+        padding: 70px 25px 80px;
+    }
+
+    .section-five-header {
+        margin-bottom: 50px;
+    }
+
+    .section-five-copy h2 {
+        font-size: 65px;
+        letter-spacing: -3px;
+    }
+
+    .section-five-copy p {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .section-five-image {
+        height: 400px;
+    }
+
+    .section-five-image-caption {
+        padding: 16px;
+    }
+}
+
+/* =========================================
+   CLIENT ACCESS
+========================================= */
+
+.client-access {
+    position: relative;
+
+    margin-left: 35px;
+}
+
+
+/* =========================================
+   TRIGGER
+========================================= */
+
+.client-access-trigger {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 0;
+
+    border: none;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   UNDERLINE
+========================================= */
+
+.client-access-trigger::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: #ff6b1a;
+
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.client-access-arrow {
+    color: #ff6b1a;
+
+    font-size: 16px;
+
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.client-access:hover .client-access-trigger::after {
+    width: 100%;
+}
+
+.client-access:hover .client-access-arrow {
+    transform: translate(4px, -4px);
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.client-access-menu {
+    position: absolute;
+
+    top: calc(100% + 18px);
+    right: 0;
+
+    width: 180px;
+
+    padding: 8px 0;
+
+    background: #1A1A1A;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   DROPDOWN OPEN
+========================================= */
+
+.client-access:hover .client-access-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   DROPDOWN LINKS
+========================================= */
+
+.client-access-menu a {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 18px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        padding 0.25s ease;
+}
+
+
+.client-access-menu a span:last-child {
+    color: #ff6b1a;
+
+    font-size: 15px;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* =========================================
+   LINK HOVER
+========================================= */
+
+.client-access-menu a:hover {
+    background: rgba(255, 255, 255, 0.06);
+
+    padding-left: 22px;
+}
+
+
+.client-access-menu a:hover span:last-child {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   ACTIVE PAGE
+========================================= */
+
+.client-access-menu a.active {
+    color: #ff6b1a;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .client-access {
+        margin-left: 20px;
+    }
+
+    .client-access-trigger {
+        font-size: 10px;
+
+        letter-spacing: 0.12em;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .client-access {
+        margin-left: auto;
+    }
+
+    .client-access-trigger span:first-child {
+        display: none;
+    }
+
+    .client-access-arrow {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================================
+   FINAL NAVIGATION ACTIVE INDICATOR
+========================================= */
+
+/* Remove every pseudo-element underline from the main navigation.
+   The indicator below is the ONLY underline used for main nav links. */
+nav > a::before,
+nav > a::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Main navigation links */
+nav > a {
+    position: relative;
+    display: inline-block;
+
+    background-image: linear-gradient(
+        to right,
+        #ff6b1a,
+        #ff6b1a
+    ) !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% 100% !important;
+    background-size: 0 2px !important;
+
+    transition: background-size 0.3s ease !important;
+}
+
+/* Hover: ONE short orange line */
+nav > a:hover {
+    background-size: 18px 2px !important;
+}
+
+/* Current page: ONE short orange line */
+nav > a.active {
+    background-size: 18px 2px !important;
+}
+
+/* =========================================================
+   LENIS SMOOTH SCROLL
+   ========================================================= */
+
+html {
+    scroll-behavior: auto;
+}
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* =========================================
+   TORQUE FLOW — PREMIUM SCROLL INDICATOR
+========================================= */
+
+.tf-scroll-indicator{
+    position: fixed !important;
+    top: 50% !important;
+    right: 28px !important;
+    transform: translateY(-50%) !important;
+    z-index: 99999 !important;
+
+    width: 28px;
+    height: 180px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+}
+
+.tf-scroll-track{
+    position: relative;
+    width: 2px;
+    height: 160px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+}
+
+.tf-scroll-progress{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    border-radius: 999px;
+
+    background: linear-gradient(
+        to bottom,
+        #ff8a3d 0%,
+        #ff6418 60%,
+        #ff3c00 100%
+    );
+
+    box-shadow:
+        0 0 10px rgba(255,100,24,0.8),
+        0 0 22px rgba(255,100,24,0.45);
+
+    transition: height 0.06s linear;
+}
+
+.tf-scroll-dot{
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #ff6418;
+
+    box-shadow:
+        0 0 0 4px rgba(255,100,24,0.12),
+        0 0 10px rgba(255,100,24,0.9);
+
+    transition: top 0.06s linear;
+}
+
+/* Home page section navigator */
+.tf-nav-label,
+.tf-nav-stops {
+    display: none;
+}
+
+.tf-site-navigator {
+    width: 150px;
+    height: 240px;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 13px;
+    pointer-events: auto;
+}
+
+.tf-site-navigator .tf-nav-label {
+    display: block;
+}
+
+.tf-site-navigator .tf-scroll-track {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    height: 185px;
+}
+
+/* The section marker itself is the active indicator on the home page. */
+.tf-site-navigator .tf-scroll-dot {
+    display: none;
+}
+
+.tf-site-navigator .tf-nav-stops {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tf-nav-stop {
+    position: relative;
+    right: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 17px;
+    padding: 0 17px 0 0;
+    border: 0;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.38);
+    font: 700 8px/1 "Poppins", sans-serif;
+    letter-spacing: 0.16em;
+    cursor: pointer;
+    transition: color 0.25s ease, padding 0.25s ease;
+}
+
+.tf-nav-stop::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    background: #0d0d0d;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tf-nav-stop:hover,
+.tf-nav-stop:focus-visible,
+.tf-nav-stop.is-active {
+    padding-right: 22px;
+    color: #ffffff;
+    outline: none;
+}
+
+.tf-nav-stop:hover::after,
+.tf-nav-stop:focus-visible::after,
+.tf-nav-stop.is-active::after {
+    transform: scale(1.45);
+    border-color: #ff6418;
+    background: #ff6418;
+    box-shadow: 0 0 0 4px rgba(255, 100, 24, 0.14), 0 0 12px rgba(255, 100, 24, 0.85);
+}
+
+.tf-nav-label {
+    position: absolute;
+    right: 24px;
+    top: -18px;
+    width: 130px;
+    color: #ff7c37;
+    font: 700 8px/1.35 "Poppins", sans-serif;
+    letter-spacing: 0.17em;
+    text-align: right;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .tf-site-navigator {
+        width: 92px;
+        height: 145px;
+        gap: 8px;
+    }
+
+    .tf-site-navigator .tf-scroll-track,
+    .tf-site-navigator .tf-nav-stops {
+        height: 108px;
+    }
+
+    .tf-nav-stop {
+        padding-right: 12px;
+    }
+
+    .tf-nav-stop span,
+    .tf-nav-label {
+        display: none;
+    }
+}
+
+/* =========================================
+   3D SCROLL EXPERIENCE
+========================================= */
+
+.page-home {
+    background: #080808;
+}
+
+.tf-hero {
+    isolation: isolate;
+    perspective: 1200px;
+}
+
+.tf-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 50%, transparent 30%, rgba(0, 0, 0, 0.54) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.48) 0%, transparent 35%, rgba(0, 0, 0, 0.66) 100%);
+}
+
+.tf-hero-orbit,
+.tf-hero-grain,
+.tf-hero-index,
+.tf-hero .hero-title,
+.tf-hero .scroll {
+    position: absolute;
+    z-index: 2;
+}
+
+.tf-hero-orbit {
+    width: min(76vw, 1040px);
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 107, 26, 0.32);
+    border-radius: 50%;
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.tf-hero-orbit-one {
+    top: -38%;
+    left: -15%;
+    box-shadow: inset 0 0 110px rgba(255, 92, 0, 0.08), 0 0 100px rgba(255, 92, 0, 0.05);
+    transform: rotateX(70deg) rotateZ(-22deg) translateZ(-100px);
+}
+
+.tf-hero-orbit-two {
+    right: -28%;
+    bottom: -48%;
+    width: min(64vw, 850px);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: rotateX(70deg) rotateZ(25deg) translateZ(-120px);
+}
+
+.tf-hero-grain {
+    z-index: 3;
+    inset: 0;
+    opacity: 0.18;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+    mix-blend-mode: soft-light;
+}
+
+.tf-hero-index {
+    top: 52%;
+    left: 5%;
+    color: #ff6b1a;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%);
+}
+
+.tf-hero .hero-title,
+.tf-hero .scroll {
+    z-index: 4;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.tf-hero .hero-title h2 {
+    text-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+    .tf-hero-index,
+    .tf-hero-orbit-two {
+        display: none;
+    }
+
+    .tf-hero-orbit-one {
+        width: 125vw;
+        top: -17%;
+        left: -46%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 1024px){
+
+    .tf-scroll-indicator{
+        right: 16px !important;
+        width: 22px;
+        height: 150px;
+    }
+
+    .tf-scroll-track{
+        height: 130px;
+    }
+
+    .tf-scroll-dot{
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+    .tf-scroll-indicator{
+        right: 8px !important;
+        width: 16px;
+        height: 110px;
+        opacity: 0.75;
+    }
+
+    .tf-scroll-track{
+        height: 90px;
+    }
+
+    .tf-scroll-dot{
+        width: 6px;
+        height: 6px;
+    }
+}

@@ -1,0 +1,1481 @@
+/* =========================================================
+   TORQUE FLOW — REGISTRATION PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE BASE
+   --------------------------------------------------------- */
+
+.registration-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #0b0b0b;
+    color: #f4f4f4;
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN REGISTRATION SECTION
+   --------------------------------------------------------- */
+
+.registration-section {
+    position: relative;
+
+    /* Keep registration section below the navbar */
+    margin-top: 90px;
+
+    min-height: calc(100vh - 90px);
+
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   LEFT SIDE
+   --------------------------------------------------------- */
+
+.registration-content {
+    position: relative;
+
+    min-height: 100%;
+
+    padding: 110px 70px 80px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("../images/registration.png") center center / cover no-repeat;
+}
+
+
+/* subtle vertical line */
+
+.registration-content::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   NUMBER
+   --------------------------------------------------------- */
+
+.registration-number {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN LEFT CONTENT
+   --------------------------------------------------------- */
+
+.registration-main {
+    position: relative;
+    z-index: 2;
+
+    max-width: 620px;
+}
+
+
+/* small orange label */
+
+.registration-label {
+    margin-bottom: 18px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+/* main heading */
+
+.registration-main h1 {
+    margin: 0;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(58px, 6vw, 105px);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+.registration-main h1 span {
+    color: #ff6418;
+}
+
+
+/* description */
+
+.registration-main p {
+    max-width: 550px;
+
+    margin: 34px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* ---------------------------------------------------------
+   VALUES
+   --------------------------------------------------------- */
+
+.registration-values {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 35px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+.registration-values span:nth-child(even) {
+    color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   WATERMARK
+   --------------------------------------------------------- */
+
+.registration-watermark {
+    position: absolute;
+    z-index: 1;
+
+    left: 3%;
+    bottom: -35px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(120px, 15vw, 260px);
+    font-weight: 900;
+    line-height: 1;
+
+    letter-spacing: -10px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.035);
+
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT SIDE
+   --------------------------------------------------------- */
+
+.registration-form-container {
+    position: relative;
+
+    min-height: 100%;
+
+    padding: 110px 9% 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #101010;
+}
+
+
+/* ---------------------------------------------------------
+   FORM HEADING
+   --------------------------------------------------------- */
+
+.registration-form-heading {
+    margin-bottom: 45px;
+}
+
+
+.form-label {
+    margin-bottom: 14px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+.registration-form-heading h2 {
+    margin: 0;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(36px, 4vw, 58px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+.registration-form-heading p {
+    margin: 18px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* ---------------------------------------------------------
+   FORM
+   --------------------------------------------------------- */
+
+.registration-form {
+    width: 100%;
+    max-width: 650px;
+}
+
+
+/* ---------------------------------------------------------
+   FORM FIELD
+   --------------------------------------------------------- */
+
+.registration-field {
+    position: relative;
+
+    margin-bottom: 27px;
+}
+
+
+.registration-field label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* ---------------------------------------------------------
+   INPUTS
+   --------------------------------------------------------- */
+
+.registration-field input,
+.registration-field textarea {
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 0;
+
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    outline: none;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    color: #ffffff;
+
+    transition:
+        border-color 0.25s ease,
+        padding 0.25s ease;
+}
+
+
+.registration-field textarea {
+    min-height: 75px;
+
+    resize: vertical;
+}
+
+
+/* remove browser autofill background */
+
+.registration-field input:-webkit-autofill,
+.registration-field input:-webkit-autofill:hover,
+.registration-field input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff;
+
+    transition:
+        background-color 5000s ease-in-out 0s;
+}
+
+
+/* ---------------------------------------------------------
+   INPUT FOCUS
+   --------------------------------------------------------- */
+
+.registration-field input:focus,
+.registration-field textarea:focus {
+    border-bottom-color: #ff6418;
+}
+
+
+.registration-field input:focus,
+.registration-field textarea:focus {
+    padding-left: 8px;
+}
+
+
+/* ---------------------------------------------------------
+   CITY + MOBILE ROW
+   --------------------------------------------------------- */
+
+.registration-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+
+/* ---------------------------------------------------------
+   PASSWORD NOTE
+   --------------------------------------------------------- */
+
+.registration-field small {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ---------------------------------------------------------
+   REGISTER BUTTON
+   --------------------------------------------------------- */
+
+.registration-submit {
+    position: relative;
+
+    width: 100%;
+    min-height: 58px;
+
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    border: 1px solid #ff6418;
+
+    border-radius: 0;
+
+    background: #ff6418;
+
+    color: #0b0b0b;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.registration-submit:hover {
+    background: transparent;
+    color: #ff6418;
+}
+
+
+.registration-submit:active {
+    transform: translateY(1px);
+}
+
+
+/* arrow */
+
+.registration-arrow {
+    font-size: 20px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+
+.registration-submit:hover .registration-arrow {
+    transform: translate(4px, -4px);
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN LINK
+   --------------------------------------------------------- */
+
+.registration-login {
+    width: 100%;
+    max-width: 650px;
+
+    margin-top: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+
+.registration-login > span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+.registration-login a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.registration-login a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: #ff6418;
+
+    transition: width 0.25s ease;
+}
+
+
+.registration-login a:hover::after {
+    width: calc(100% - 18px);
+}
+
+
+.registration-login a span {
+    color: #ff6418;
+
+    font-size: 14px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.registration-login a:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* ---------------------------------------------------------
+   SELECTION
+   --------------------------------------------------------- */
+
+.registration-page ::selection {
+    background: #ff6418;
+    color: #0b0b0b;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .registration-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    .registration-content {
+        min-height: 650px;
+
+        padding:
+            100px
+            8%
+            70px;
+    }
+
+
+    .registration-content::after {
+        display: none;
+    }
+
+
+    .registration-form-container {
+        min-height: auto;
+
+        padding:
+            90px
+            8%
+            100px;
+    }
+
+
+    .registration-watermark {
+        font-size: 18vw;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .registration-content {
+        min-height: 570px;
+
+        padding:
+            80px
+            25px
+            60px;
+    }
+
+
+    .registration-main h1 {
+        font-size: 58px;
+        letter-spacing: -2px;
+    }
+
+
+    .registration-main p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    .registration-values {
+        gap: 8px;
+
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+
+    .registration-watermark {
+        left: 0;
+        bottom: -10px;
+
+        font-size: 30vw;
+        letter-spacing: -5px;
+    }
+
+
+    .registration-form-container {
+        padding:
+            70px
+            25px
+            80px;
+    }
+
+
+    .registration-form-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .registration-form-heading h2 {
+        font-size: 40px;
+    }
+
+
+    .registration-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    .registration-field {
+        margin-bottom: 25px;
+    }
+
+
+    .registration-login {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+    .registration-content {
+        min-height: 520px;
+
+        padding:
+            70px
+            20px
+            50px;
+    }
+
+
+    .registration-main h1 {
+        font-size: 48px;
+    }
+
+
+    .registration-main p {
+        margin-top: 25px;
+
+        font-size: 13px;
+    }
+
+
+    .registration-form-container {
+        padding:
+            60px
+            20px
+            70px;
+    }
+
+
+    .registration-form-heading h2 {
+        font-size: 34px;
+    }
+
+}/* =========================================================
+   TORQUE FLOW — REGISTRATION PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE BASE
+   --------------------------------------------------------- */
+
+.registration-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #0b0b0b;
+    color: #f4f4f4;
+    overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN REGISTRATION SECTION
+   --------------------------------------------------------- */
+
+.registration-section {
+    position: relative;
+
+    /* Keep registration section below the navbar */
+    margin-top: 90px;
+
+    min-height: calc(100vh - 90px);
+
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   LEFT SIDE
+   --------------------------------------------------------- */
+
+.registration-content {
+    position: relative;
+
+    min-height: 100%;
+
+    padding: 110px 70px 80px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94),
+            rgba(0, 0, 0, 0.78)
+        ),
+        url("../images/registration.png") center center / cover no-repeat;
+}
+
+
+/* subtle vertical line */
+
+.registration-content::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 1px;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   NUMBER
+   --------------------------------------------------------- */
+
+.registration-number {
+    position: relative;
+    z-index: 2;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN LEFT CONTENT
+   --------------------------------------------------------- */
+
+.registration-main {
+    position: relative;
+    z-index: 2;
+
+    max-width: 620px;
+}
+
+
+/* small orange label */
+
+.registration-label {
+    margin-bottom: 18px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+/* main heading */
+
+.registration-main h1 {
+    margin: 0;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(58px, 6vw, 105px);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+.registration-main h1 span {
+    color: #ff6418;
+}
+
+
+/* description */
+
+.registration-main p {
+    max-width: 550px;
+
+    margin: 34px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* ---------------------------------------------------------
+   VALUES
+   --------------------------------------------------------- */
+
+.registration-values {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 35px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+.registration-values span:nth-child(even) {
+    color: #ff6418;
+}
+
+
+/* ---------------------------------------------------------
+   WATERMARK
+   --------------------------------------------------------- */
+
+.registration-watermark {
+    position: absolute;
+    z-index: 1;
+
+    left: 3%;
+    bottom: -35px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(120px, 15vw, 260px);
+    font-weight: 900;
+    line-height: 1;
+
+    letter-spacing: -10px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.035);
+
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT SIDE
+   --------------------------------------------------------- */
+
+.registration-form-container {
+    position: relative;
+
+    min-height: 100%;
+
+    padding: 110px 9% 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #101010;
+}
+
+
+/* ---------------------------------------------------------
+   FORM HEADING
+   --------------------------------------------------------- */
+
+.registration-form-heading {
+    margin-bottom: 45px;
+}
+
+
+.form-label {
+    margin-bottom: 14px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #ff6418;
+}
+
+
+.registration-form-heading h2 {
+    margin: 0;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: clamp(36px, 4vw, 58px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+}
+
+
+.registration-form-heading p {
+    margin: 18px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* ---------------------------------------------------------
+   FORM
+   --------------------------------------------------------- */
+
+.registration-form {
+    width: 100%;
+    max-width: 650px;
+}
+
+
+/* ---------------------------------------------------------
+   FORM FIELD
+   --------------------------------------------------------- */
+
+.registration-field {
+    position: relative;
+
+    margin-bottom: 27px;
+}
+
+
+.registration-field label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* ---------------------------------------------------------
+   INPUTS
+   --------------------------------------------------------- */
+
+.registration-field input,
+.registration-field textarea {
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 0;
+
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+    outline: none;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+
+    color: #ffffff;
+
+    transition:
+        border-color 0.25s ease,
+        padding 0.25s ease;
+}
+
+
+.registration-field textarea {
+    min-height: 75px;
+
+    resize: vertical;
+}
+
+
+/* remove browser autofill background */
+
+.registration-field input:-webkit-autofill,
+.registration-field input:-webkit-autofill:hover,
+.registration-field input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff;
+
+    transition:
+        background-color 5000s ease-in-out 0s;
+}
+
+
+/* ---------------------------------------------------------
+   INPUT FOCUS
+   --------------------------------------------------------- */
+
+.registration-field input:focus,
+.registration-field textarea:focus {
+    border-bottom-color: #ff6418;
+}
+
+
+.registration-field input:focus,
+.registration-field textarea:focus {
+    padding-left: 8px;
+}
+
+
+/* ---------------------------------------------------------
+   CITY + MOBILE ROW
+   --------------------------------------------------------- */
+
+.registration-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+}
+
+
+/* ---------------------------------------------------------
+   PASSWORD NOTE
+   --------------------------------------------------------- */
+
+.registration-field small {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ---------------------------------------------------------
+   REGISTER BUTTON
+   --------------------------------------------------------- */
+
+.registration-submit {
+    position: relative;
+
+    width: 100%;
+    min-height: 58px;
+
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 22px;
+
+    border: 1px solid #ff6418;
+
+    border-radius: 0;
+
+    background: #ff6418;
+
+    color: #0b0b0b;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.registration-submit:hover {
+    background: transparent;
+    color: #ff6418;
+}
+
+
+.registration-submit:active {
+    transform: translateY(1px);
+}
+
+
+/* arrow */
+
+.registration-arrow {
+    font-size: 20px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+
+.registration-submit:hover .registration-arrow {
+    transform: translate(4px, -4px);
+}
+
+
+/* ---------------------------------------------------------
+   LOGIN LINK
+   --------------------------------------------------------- */
+
+.registration-login {
+    width: 100%;
+    max-width: 650px;
+
+    margin-top: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+
+.registration-login > span {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+.registration-login a {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.registration-login a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: #ff6418;
+
+    transition: width 0.25s ease;
+}
+
+
+.registration-login a:hover::after {
+    width: calc(100% - 18px);
+}
+
+
+.registration-login a span {
+    color: #ff6418;
+
+    font-size: 14px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.registration-login a:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* ---------------------------------------------------------
+   SELECTION
+   --------------------------------------------------------- */
+
+.registration-page ::selection {
+    background: #ff6418;
+    color: #0b0b0b;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+    .registration-section {
+        grid-template-columns: 1fr;
+    }
+
+
+    .registration-content {
+        min-height: 650px;
+
+        padding:
+            100px
+            8%
+            70px;
+    }
+
+
+    .registration-content::after {
+        display: none;
+    }
+
+
+    .registration-form-container {
+        min-height: auto;
+
+        padding:
+            90px
+            8%
+            100px;
+    }
+
+
+    .registration-watermark {
+        font-size: 18vw;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .registration-content {
+        min-height: 570px;
+
+        padding:
+            80px
+            25px
+            60px;
+    }
+
+
+    .registration-main h1 {
+        font-size: 58px;
+        letter-spacing: -2px;
+    }
+
+
+    .registration-main p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    .registration-values {
+        gap: 8px;
+
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+
+    .registration-watermark {
+        left: 0;
+        bottom: -10px;
+
+        font-size: 30vw;
+        letter-spacing: -5px;
+    }
+
+
+    .registration-form-container {
+        padding:
+            70px
+            25px
+            80px;
+    }
+
+
+    .registration-form-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .registration-form-heading h2 {
+        font-size: 40px;
+    }
+
+
+    .registration-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    .registration-field {
+        margin-bottom: 25px;
+    }
+
+
+    .registration-login {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+    .registration-content {
+        min-height: 520px;
+
+        padding:
+            70px
+            20px
+            50px;
+    }
+
+
+    .registration-main h1 {
+        font-size: 48px;
+    }
+
+
+    .registration-main p {
+        margin-top: 25px;
+
+        font-size: 13px;
+    }
+
+
+    .registration-form-container {
+        padding:
+            60px
+            20px
+            70px;
+    }
+
+
+    .registration-form-heading h2 {
+        font-size: 34px;
+    }
+
+}
