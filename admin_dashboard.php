@@ -56,6 +56,9 @@ $standard_services = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Console — Torque Flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/admin.css?v=<?= time() ?>">
 </head>
 <body>
@@ -485,7 +488,9 @@ $standard_services = [
             <section class="tab-content" id="tab-bookings">
                 
                 <div class="placeholder-box">
-                    <div class="placeholder-icon">📋</div>
+                    <div class="placeholder-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
                     <h2 class="placeholder-title">Customer Bookings Module</h2>
                     <p class="placeholder-text">
                         The customer booking module is reserved for integration with the upcoming booking engine. 
@@ -504,7 +509,9 @@ $standard_services = [
             <section class="tab-content" id="tab-reports">
                 
                 <div class="placeholder-box">
-                    <div class="placeholder-icon">📊</div>
+                    <div class="placeholder-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    </div>
                     <h2 class="placeholder-title">Automotive Analytics & Reports</h2>
                     <p class="placeholder-text">
                         Comprehensive workshop performance analytics, service turnaround metrics, and revenue summaries. 
