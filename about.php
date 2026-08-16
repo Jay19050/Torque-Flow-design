@@ -3,7 +3,7 @@ $page = "about";
 include 'header.php';
 ?>
 
-<main class="about-page">
+<main id="main-content" class="about-page">
 
     <!-- ABOUT HERO -->
     <section class="about-hero">
@@ -48,62 +48,62 @@ include 'header.php';
     <div class="marquee-track">
 
         <div class="marquee-item">
-            TORQUE FLOW <span>/</span>
+            TORQUE FLOW <span aria-hidden="true">/</span>
         </div>
 
         <div class="marquee-item">
-            PRECISION <span>◆</span>
+            PRECISION <span aria-hidden="true">◆</span>
         </div>
 
         <div class="marquee-item">
-            PERFORMANCE <span>/</span>
+            PERFORMANCE <span aria-hidden="true">/</span>
         </div>
 
         <div class="marquee-item">
-            ENGINEERING <span>◆</span>
+            ENGINEERING <span aria-hidden="true">◆</span>
         </div>
 
         <div class="marquee-item">
-            CRAFTSMANSHIP <span>/</span>
+            CRAFTSMANSHIP <span aria-hidden="true">/</span>
         </div>
 
         <div class="marquee-item">
-            DETAIL <span>◆</span>
+            DETAIL <span aria-hidden="true">◆</span>
         </div>
 
         <div class="marquee-item">
-            BUILT FOR DRIVERS <span>/</span>
+            BUILT FOR DRIVERS <span aria-hidden="true">/</span>
         </div>
 
 
         <!-- Repeat for seamless scrolling -->
 
         <div class="marquee-item">
-            TORQUE FLOW <span>/</span>
+            TORQUE FLOW <span aria-hidden="true">/</span>
         </div>
 
         <div class="marquee-item">
-            PRECISION <span>◆</span>
+            PRECISION <span aria-hidden="true">◆</span>
         </div>
 
         <div class="marquee-item">
-            PERFORMANCE <span>/</span>
+            PERFORMANCE <span aria-hidden="true">/</span>
         </div>
 
         <div class="marquee-item">
-            ENGINEERING <span>◆</span>
+            ENGINEERING <span aria-hidden="true">◆</span>
         </div>
 
         <div class="marquee-item">
-            CRAFTSMANSHIP <span>/</span>
+            CRAFTSMANSHIP <span aria-hidden="true">/</span>
         </div>
 
         <div class="marquee-item">
-            DETAIL <span>◆</span>
+            DETAIL <span aria-hidden="true">◆</span>
         </div>
 
         <div class="marquee-item">
-            BUILT FOR DRIVERS <span>/</span>
+            BUILT FOR DRIVERS <span aria-hidden="true">/</span>
         </div>
 
     </div>
@@ -116,7 +116,7 @@ include 'header.php';
 
         <!-- Background image -->
         <div class="standard-image">
-            <img src="images/about-standard.png" alt="Luxury performance car">
+            <img src="images/about-standard.png" alt="Luxury performance car" width="1672" height="941" loading="lazy" decoding="async">
         </div>
 
         <!-- Dark overlay -->
@@ -147,9 +147,9 @@ include 'header.php';
 
             <div class="standard-caption">
                 <span>INTEGRITY</span>
-                <b>/</b>
+                <b aria-hidden="true">/</b>
                 <span>PRECISION</span>
-                <b>/</b>
+                <b aria-hidden="true">/</b>
                 <span>PERFORMANCE</span>
             </div>
 
@@ -166,62 +166,62 @@ include 'header.php';
         <div class="marquee-track">
 
             <div class="marquee-item">
-                TORQUE FLOW <span>/</span>
+                TORQUE FLOW <span aria-hidden="true">/</span>
             </div>
 
             <div class="marquee-item">
-                PRECISION <span>◆</span>
+                PRECISION <span aria-hidden="true">◆</span>
             </div>
 
             <div class="marquee-item">
-                PERFORMANCE <span>/</span>
+                PERFORMANCE <span aria-hidden="true">/</span>
             </div>
 
             <div class="marquee-item">
-                ENGINEERING <span>◆</span>
+                ENGINEERING <span aria-hidden="true">◆</span>
             </div>
 
             <div class="marquee-item">
-                CRAFTSMANSHIP <span>/</span>
+                CRAFTSMANSHIP <span aria-hidden="true">/</span>
             </div>
 
             <div class="marquee-item">
-                DETAIL <span>◆</span>
+                DETAIL <span aria-hidden="true">◆</span>
             </div>
 
             <div class="marquee-item">
-                BUILT FOR DRIVERS <span>/</span>
+                BUILT FOR DRIVERS <span aria-hidden="true">/</span>
             </div>
 
 
             <!-- Repeat for seamless scrolling -->
 
             <div class="marquee-item">
-                TORQUE FLOW <span>/</span>
+                TORQUE FLOW <span aria-hidden="true">/</span>
             </div>
 
             <div class="marquee-item">
-                PRECISION <span>◆</span>
+                PRECISION <span aria-hidden="true">◆</span>
             </div>
 
             <div class="marquee-item">
-                PERFORMANCE <span>/</span>
+                PERFORMANCE <span aria-hidden="true">/</span>
             </div>
 
             <div class="marquee-item">
-                ENGINEERING <span>◆</span>
+                ENGINEERING <span aria-hidden="true">◆</span>
             </div>
 
             <div class="marquee-item">
-                CRAFTSMANSHIP <span>/</span>
+                CRAFTSMANSHIP <span aria-hidden="true">/</span>
             </div>
 
             <div class="marquee-item">
-                DETAIL <span>◆</span>
+                DETAIL <span aria-hidden="true">◆</span>
             </div>
 
             <div class="marquee-item">
-                BUILT FOR DRIVERS <span>/</span>
+                BUILT FOR DRIVERS <span aria-hidden="true">/</span>
             </div>
 
         </div>
@@ -248,16 +248,16 @@ include 'header.php';
 
                 <p>
                     Your vehicle is more than a machine. It is a reflection
-                    of performance, personality, and precision. That's why
+                    of performance, personality, and precision. That’s why
                     every Torque Flow service is approached with the same
                     attention to detail we would give our own cars.
                 </p>
 
                 <div class="precision-meta">
                     <span>EXPERTISE</span>
-                    <i>/</i>
+                    <i aria-hidden="true">/</i>
                     <span>TECHNOLOGY</span>
-                    <i>/</i>
+                    <i aria-hidden="true">/</i>
                     <span>CARE</span>
                 </div>
 
@@ -271,7 +271,7 @@ include 'header.php';
                     02
                 </div>
 
-                <img src="images/about-detail.png" alt="Precision automotive service at Torque Flow">
+                <img src="images/about-detail.png" alt="Precision automotive service at Torque Flow" width="1672" height="941" loading="lazy" decoding="async">
 
                 <div class="precision-image-caption">
                     <span>TORQUE FLOW</span>

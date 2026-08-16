@@ -4,12 +4,18 @@
         const dot = document.querySelector('.tf-scroll-dot');
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+        let indicatorTicking = false;
         const updateIndicator = () => {
             if (!progress || !dot) return;
-            const available = document.documentElement.scrollHeight - window.innerHeight;
-            const percentage = available > 0 ? Math.min((window.scrollY / available) * 100, 100) : 0;
-            progress.style.height = `${percentage}%`;
-            dot.style.top = `${percentage}%`;
+            if (indicatorTicking) return;
+            indicatorTicking = true;
+            requestAnimationFrame(() => {
+                const available = document.documentElement.scrollHeight - window.innerHeight;
+                const percentage = available > 0 ? Math.min((window.scrollY / available) * 100, 100) : 0;
+                progress.style.height = `${percentage}%`;
+                dot.style.top = `${percentage}%`;
+                indicatorTicking = false;
+            });
         };
 
         updateIndicator();
@@ -68,26 +74,32 @@
 
             activate(0);
 
+            let sectionTicking = false;
             const updateActiveSection = () => {
-                const focusY = window.innerHeight * 0.45;
-                let activeIndex = 0;
-                let minDistance = Infinity;
+                if (sectionTicking) return;
+                sectionTicking = true;
+                requestAnimationFrame(() => {
+                    const focusY = window.innerHeight * 0.45;
+                    let activeIndex = 0;
+                    let minDistance = Infinity;
 
-                sections.forEach((section, index) => {
-                    const rect = section.getBoundingClientRect();
-                    if (rect.top <= focusY && rect.bottom >= focusY) {
-                        activeIndex = index;
-                        minDistance = 0;
-                    } else if (minDistance !== 0) {
-                        const dist = Math.min(Math.abs(rect.top - focusY), Math.abs(rect.bottom - focusY));
-                        if (dist < minDistance) {
-                            minDistance = dist;
+                    sections.forEach((section, index) => {
+                        const rect = section.getBoundingClientRect();
+                        if (rect.top <= focusY && rect.bottom >= focusY) {
                             activeIndex = index;
+                            minDistance = 0;
+                        } else if (minDistance !== 0) {
+                            const dist = Math.min(Math.abs(rect.top - focusY), Math.abs(rect.bottom - focusY));
+                            if (dist < minDistance) {
+                                minDistance = dist;
+                                activeIndex = index;
+                            }
                         }
-                    }
-                });
+                    });
 
-                activate(activeIndex);
+                    activate(activeIndex);
+                    sectionTicking = false;
+                });
             };
 
             window.addEventListener('scroll', updateActiveSection, { passive: true });
@@ -146,7 +158,7 @@
         if (hero && heroCopy) {
             gsap.timeline()
                 .fromTo(header, { yPercent: -120, autoAlpha: 0 }, { yPercent: 0, autoAlpha: 1, duration: 0.8, ease: 'power3.out' })
-                .fromTo('.hero-title h2, .hero-title p, .scroll', { y: 34, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.85, stagger: 0.09, ease: 'power3.out' }, '-=0.3');
+                .fromTo('.hero-title h1, .hero-title h2, .hero-title p, .scroll', { y: 34, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.85, stagger: 0.09, ease: 'power3.out' }, '-=0.3');
 
             gsap.to(heroCopy, { yPercent: -35, scale: 0.82, opacity: 0.15, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });
             gsap.to('.tf-hero-orbit-one', { rotate: 23, xPercent: 18, ease: 'none', scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: true } });

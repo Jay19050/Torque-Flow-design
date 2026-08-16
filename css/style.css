@@ -1,5 +1,5 @@
 /* =========================================
-   GLOBAL RESET
+   GLOBAL RESET & ACCESSIBILITY
    ========================================= */
 
 * {
@@ -19,6 +19,77 @@ body {
   overflow-x: hidden;
 }
 
+/* Skip link for keyboard accessibility */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: #ff6418;
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 9999;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 20px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Heading & Numeric Typography */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+.home-stat-value,
+.point-number,
+.home-standard-number,
+.home-services-number,
+.service-item-number,
+.home-stats-number,
+.home-featured-number,
+.section-five-number,
+.standard-number,
+.precision-number,
+.precision-image-number,
+.services-section-number,
+.service-number,
+.service-detail-number,
+.services-cta-number,
+.contact-number,
+.contact-details-number,
+.contact-form-number,
+.login-number,
+.registration-number {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Scroll margin offset for sticky header */
+section[id],
+.service-detail,
+.services-overview,
+.contact-details,
+.contact-form-section,
+.contact-location {
+  scroll-margin-top: 110px;
+}
+
+/* Universal high-visibility focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #ff6418 !important;
+  outline-offset: 3px !important;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -26,6 +97,7 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 

@@ -3,7 +3,7 @@ $page = "contact";
 include 'header.php';
 ?>
 
-<main class="contact-page">
+<main id="main-content" class="contact-page">
 
     <!-- =====================================================
          CONTACT — SECTION 01 / HERO
@@ -34,13 +34,13 @@ include 'header.php';
             </span>
 
             <h1>
-                LET'S TALK<br>
+                LET’S TALK<br>
                 <span>ABOUT YOUR CAR.</span>
             </h1>
 
             <p>
                 Whether you need routine maintenance, advanced diagnostics,
-                or performance-focused service, we're ready to help.
+                or performance-focused service, we’re ready to help.
             </p>
 
         </div>
@@ -75,7 +75,7 @@ include 'header.php';
                 </span>
 
                 <h2>
-                    WE'RE HERE<br>
+                    WE’RE HERE<br>
                     <span>TO HELP.</span>
                 </h2>
 
@@ -91,7 +91,7 @@ include 'header.php';
                     </span>
 
                     <a href="tel:+919408663504">
-                        +91 9408663504 
+                        +91&nbsp;9408663504 
                     </a>
 
                 </div>
@@ -118,16 +118,16 @@ include 'header.php';
 
                     <div class="contact-socials">
 
-                        <a href="#" aria-label="Instagram">
-                            INSTAGRAM ↗
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Torque Flow Instagram">
+                            INSTAGRAM <span aria-hidden="true">↗</span>
                         </a>
 
-                        <a href="#" aria-label="Facebook">
-                            FACEBOOK ↗
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Torque Flow Facebook">
+                            FACEBOOK <span aria-hidden="true">↗</span>
                         </a>
 
-                        <a href="#" aria-label="LinkedIn">
-                            LINKEDIN ↗
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Torque Flow LinkedIn">
+                            LINKEDIN <span aria-hidden="true">↗</span>
                         </a>
 
                     </div>
@@ -160,7 +160,7 @@ include 'header.php';
                 </span>
 
                 <h2>
-                    LET'S START<br>
+                    LET’S START<br>
                     <span>A CONVERSATION.</span>
                 </h2>
 
@@ -186,7 +186,8 @@ include 'header.php';
                             type="text"
                             id="contact-name"
                             name="name"
-                            placeholder="Enter your name"
+                            autocomplete="name"
+                            placeholder="e.g., Alex Smith…"
                             required
                         >
 
@@ -203,7 +204,10 @@ include 'header.php';
                             type="email"
                             id="contact-email"
                             name="email"
-                            placeholder="Enter your email"
+                            autocomplete="email"
+                            spellcheck="false"
+                            autocapitalize="none"
+                            placeholder="e.g., alex@example.com…"
                             required
                         >
 
@@ -224,7 +228,9 @@ include 'header.php';
                             type="tel"
                             id="contact-phone"
                             name="phone"
-                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            inputmode="tel"
+                            placeholder="e.g., +91 94086 63504…"
                         >
 
                     </div>
@@ -242,7 +248,7 @@ include 'header.php';
                         >
 
                             <option value="" selected disabled>
-                                Select a service
+                                Select a service…
                             </option>
 
                             <option value="performance">
@@ -278,7 +284,7 @@ include 'header.php';
                         id="contact-message"
                         name="message"
                         rows="6"
-                        placeholder="Tell us about your vehicle..."
+                        placeholder="Tell us about your vehicle…"
                     ></textarea>
 
                 </div>
@@ -288,8 +294,8 @@ include 'header.php';
                     type="submit"
                     class="contact-submit"
                 >
-                    SEND MESSAGE
-                    <span>↗</span>
+                    <span>SEND MESSAGE</span>
+                    <span class="contact-submit-arrow" aria-hidden="true">↗</span>
                 </button>
 
             </form>

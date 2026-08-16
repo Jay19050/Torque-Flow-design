@@ -57,7 +57,7 @@ if(isset($_POST["btnlogin"]))
 ?>
 
 
-<main class="login-page">
+<main id="main-content" class="login-page">
 
     <section class="login-section">
 
@@ -93,7 +93,16 @@ if(isset($_POST["btnlogin"]))
                             EMAIL ADDRESS
                         </label>
 
-                        <input type="email" id="login-email" name="txtemail" autocomplete="email" required>
+                        <input
+                            type="email"
+                            id="login-email"
+                            name="txtemail"
+                            autocomplete="email"
+                            spellcheck="false"
+                            autocapitalize="none"
+                            placeholder="e.g., alex@example.com…"
+                            required
+                        >
 
                     </div>
 
@@ -104,8 +113,15 @@ if(isset($_POST["btnlogin"]))
                             PASSWORD
                         </label>
 
-                        <input type="password" id="login-password" name="txtpwd" autocomplete="current-password"
-                            required>
+                        <input
+                            type="password"
+                            id="login-password"
+                            name="txtpwd"
+                            autocomplete="current-password"
+                            spellcheck="false"
+                            placeholder="Enter your password…"
+                            required
+                        >
 
                     </div>
 
@@ -116,7 +132,7 @@ if(isset($_POST["btnlogin"]))
                             LOGIN
                         </span>
 
-                        <span class="login-arrow">
+                        <span class="login-arrow" aria-hidden="true">
                             ↗
                         </span>
 
@@ -130,12 +146,12 @@ if(isset($_POST["btnlogin"]))
                 <div class="login-register">
 
                     <span>
-                        DON'T HAVE AN ACCOUNT?
+                        DON’T HAVE AN ACCOUNT?
                     </span>
 
                     <a href="registration.php">
                         REGISTER
-                        <span>↗</span>
+                        <span aria-hidden="true">↗</span>
                     </a>
 
                 </div>
@@ -178,7 +194,7 @@ if(isset($_POST["btnlogin"]))
                         PRECISION
                     </span>
 
-                    <span class="login-dot">
+                    <span class="login-dot" aria-hidden="true">
                         /
                     </span>
 
@@ -186,7 +202,7 @@ if(isset($_POST["btnlogin"]))
                         PERFORMANCE
                     </span>
 
-                    <span class="login-dot">
+                    <span class="login-dot" aria-hidden="true">
                         /
                     </span>
 

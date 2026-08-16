@@ -169,7 +169,7 @@ if(isset($_POST["btnregis"]))
 <link rel="stylesheet" href="css/registration.css?v=1">
 
 
-<main class="registration-page">
+<main id="main-content" class="registration-page">
 
     <section class="registration-section">
 
@@ -198,15 +198,15 @@ if(isset($_POST["btnregis"]))
 
                 <div class="registration-values">
                     <span>PRECISION</span>
-                    <span>/</span>
+                    <span aria-hidden="true">/</span>
                     <span>PERFORMANCE</span>
-                    <span>/</span>
+                    <span aria-hidden="true">/</span>
                     <span>CARE</span>
                 </div>
 
             </div>
 
-            <div class="registration-watermark">
+            <div class="registration-watermark" aria-hidden="true">
                 REGISTER
             </div>
 
@@ -252,6 +252,8 @@ if(isset($_POST["btnregis"]))
                         id="txtname"
                         name="txtname"
                         autocomplete="name"
+                        placeholder="e.g., Alex Smith…"
+                        required
                     >
 
                 </div>
@@ -269,6 +271,8 @@ if(isset($_POST["btnregis"]))
                         name="txtadd"
                         rows="3"
                         autocomplete="street-address"
+                        placeholder="e.g., 123 Performance Way…"
+                        required
                     ></textarea>
 
                 </div>
@@ -288,6 +292,8 @@ if(isset($_POST["btnregis"]))
                             id="txtcity"
                             name="txtcity"
                             autocomplete="address-level2"
+                            placeholder="e.g., Mumbai…"
+                            required
                         >
 
                     </div>
@@ -300,12 +306,15 @@ if(isset($_POST["btnregis"]))
                         </label>
 
                         <input
-                            type="text"
+                            type="tel"
                             id="txtmno"
                             name="txtmno"
                             maxlength="10"
-                            inputmode="numeric"
+                            pattern="[0-9]{10}"
+                            inputmode="tel"
                             autocomplete="tel"
+                            placeholder="e.g., 9408663504…"
+                            required
                         >
 
                     </div>
@@ -325,6 +334,10 @@ if(isset($_POST["btnregis"]))
                         id="txtemail"
                         name="txtemail"
                         autocomplete="email"
+                        spellcheck="false"
+                        autocapitalize="none"
+                        placeholder="e.g., alex@example.com…"
+                        required
                     >
 
                 </div>
@@ -343,9 +356,13 @@ if(isset($_POST["btnregis"]))
                         name="txtpwd"
                         maxlength="10"
                         autocomplete="new-password"
+                        spellcheck="false"
+                        aria-describedby="pwd-help"
+                        placeholder="Enter 6–10 characters…"
+                        required
                     >
 
-                    <small>
+                    <small id="pwd-help">
                         6–10 CHARACTERS
                     </small>
 
@@ -364,7 +381,7 @@ if(isset($_POST["btnregis"]))
                         REGISTER
                     </span>
 
-                    <span class="registration-arrow">
+                    <span class="registration-arrow" aria-hidden="true">
                         ↗
                     </span>
 
@@ -381,7 +398,7 @@ if(isset($_POST["btnregis"]))
                 </span>
 
                 <a href="login.php">
-                    LOGIN <span>↗</span>
+                    LOGIN <span aria-hidden="true">↗</span>
                 </a>
 
             </div>
