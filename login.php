@@ -21,7 +21,7 @@ if(isset($_POST["btnlogin"]))
 
         echo "<script>";
         echo "alert('Admin Login Successful');";
-        echo "window.location.href='admin_dashboard.php';";
+        echo "window.location.href='admin_manage_type.php';";
         echo "</script>";
     }
     else

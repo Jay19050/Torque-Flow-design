@@ -135,5 +135,6 @@
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
     <script src="js/scroll-experience.js?v=4"></script>
+    <script src="js/molten-metal.js?v=1"></script>
 
 </footer>
