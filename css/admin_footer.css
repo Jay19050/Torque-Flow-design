@@ -1,0 +1,364 @@
+/* =========================================================
+   TORQUE FLOW
+   ADMIN FOOTER
+   ========================================================= */
+
+.tf-admin-footer {
+    width: 100%;
+
+    background: #080808;
+
+    color: #f3f1ec;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    font-family:
+        "IBM Plex Mono",
+        "Courier New",
+        monospace;
+}
+
+
+/* =========================================================
+   TOP SECTION
+   ========================================================= */
+
+.tf-admin-footer-top {
+
+    width: 100%;
+
+    padding:
+        70px
+        6vw
+        65px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+    gap: 6vw;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.tf-footer-brand-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* TF MARK */
+
+.tf-footer-mark {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #ff6418;
+
+    color: #ff6418;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transform: rotate(45deg);
+}
+
+
+/* BRAND NAME */
+
+.tf-footer-name {
+
+    font-family:
+        "Arial Narrow",
+        Arial,
+        sans-serif;
+
+    font-size: 30px;
+
+    letter-spacing: 0.08em;
+
+    line-height: 1;
+}
+
+
+/* DESCRIPTION */
+
+.tf-footer-brand p {
+
+    margin:
+
+        24px
+        0
+        0;
+
+    max-width: 360px;
+
+    color:
+        rgba(243, 241, 236, 0.42);
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.13em;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.tf-footer-status-label {
+
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #ff6418;
+
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   SYSTEM STATUS
+   ========================================================= */
+
+.tf-status-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color:
+        rgba(243, 241, 236, 0.65);
+
+    font-size: 9px;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* STATUS DOT */
+
+.tf-status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    display: block;
+
+    background: #ff6418;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 4px rgba(255, 100, 24, 0.10);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.tf-footer-navigation {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.tf-footer-navigation a {
+
+    width: 100%;
+
+    padding: 11px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color:
+        rgba(243, 241, 236, 0.52);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    font-size: 9px;
+
+    letter-spacing: 0.08em;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        padding 0.2s ease;
+}
+
+
+.tf-footer-navigation a span {
+
+    color: #ff6418;
+
+    font-size: 12px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.tf-footer-navigation a:hover {
+
+    color: #f3f1ec;
+
+    padding-left: 7px;
+}
+
+
+.tf-footer-navigation a:hover span {
+
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* =========================================================
+   BOTTOM BAR
+   ========================================================= */
+
+.tf-admin-footer-bottom {
+
+    min-height: 55px;
+
+    padding:
+        0
+        6vw;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color:
+        rgba(243, 241, 236, 0.27);
+
+    font-size: 7px;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* Orange separator */
+
+.tf-admin-footer-bottom span:nth-child(2) {
+
+    color:
+        rgba(255, 100, 24, 0.60);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .tf-admin-footer-top {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 50px;
+    }
+
+    .tf-footer-brand {
+
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .tf-admin-footer-top {
+
+        padding:
+            50px 25px;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+    }
+
+
+    .tf-footer-brand {
+
+        grid-column:
+            auto;
+    }
+
+
+    .tf-footer-name {
+
+        font-size: 24px;
+    }
+
+
+    .tf-admin-footer-bottom {
+
+        padding:
+            20px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+}

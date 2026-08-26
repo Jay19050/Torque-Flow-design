@@ -1,0 +1,734 @@
+/* =========================================================
+   TORQUE FLOW
+   ADMIN HEADER
+   No Bootstrap
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   ROOT
+   --------------------------------------------------------- */
+
+:root {
+    --tf-header-bg: #0a0a0a;
+    --tf-header-border: rgba(255, 255, 255, 0.10);
+
+    --tf-header-text: #f3f1ec;
+    --tf-header-muted: rgba(243, 241, 236, 0.48);
+    --tf-header-dim: rgba(243, 241, 236, 0.25);
+
+    --tf-header-orange: #ff6418;
+    --tf-header-orange-soft: rgba(255, 100, 24, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   RESET
+   --------------------------------------------------------- */
+
+.tf-admin-header,
+.tf-admin-header *,
+.tf-admin-header *::before,
+.tf-admin-header *::after {
+    box-sizing: border-box;
+}
+
+
+.tf-admin-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.tf-admin-header button {
+    font: inherit;
+}
+
+
+/* ---------------------------------------------------------
+   HEADER
+   --------------------------------------------------------- */
+
+.tf-admin-header {
+    position: relative;
+    z-index: 1000;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.018),
+            transparent 35%,
+            transparent 65%,
+            rgba(255, 255, 255, 0.018)
+        ),
+        var(--tf-header-bg);
+
+    color: var(--tf-header-text);
+
+    border-bottom: 1px solid var(--tf-header-border);
+
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN NAV
+   --------------------------------------------------------- */
+
+.tf-admin-nav {
+    width: 100%;
+    min-height: 82px;
+
+    padding: 0 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+
+/* ---------------------------------------------------------
+   BRAND
+   --------------------------------------------------------- */
+
+.tf-admin-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    height: 82px;
+
+    flex-shrink: 0;
+}
+
+
+/* TF MARK */
+
+.tf-brand-mark {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--tf-header-orange);
+
+    color: var(--tf-header-orange);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: -0.05em;
+
+    transform: rotate(45deg);
+}
+
+
+/* Counter rotate text */
+
+.tf-brand-mark::first-line {
+    transform: rotate(-45deg);
+}
+
+
+/* BRAND NAME */
+
+.tf-brand-name {
+    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    letter-spacing: 0.06em;
+
+    white-space: nowrap;
+}
+
+
+/* ADMIN LABEL */
+
+.tf-brand-label {
+    align-self: flex-start;
+
+    margin-top: 21px;
+
+    color: var(--tf-header-orange);
+
+    font-size: 8px;
+
+    letter-spacing: 0.15em;
+
+    white-space: nowrap;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT SIDE
+   --------------------------------------------------------- */
+
+.tf-nav-right {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.tf-nav-links {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+/* ---------------------------------------------------------
+   NAV LINKS
+   --------------------------------------------------------- */
+
+.tf-nav-link {
+    position: relative;
+
+    height: 82px;
+
+    padding: 0 21px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--tf-header-muted);
+
+    cursor: pointer;
+
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 0.10em;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Orange line */
+
+.tf-nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 21px;
+    right: 21px;
+
+    bottom: 0;
+
+    height: 2px;
+
+    background: var(--tf-header-orange);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.25s ease;
+}
+
+
+.tf-nav-link:hover {
+    color: var(--tf-header-text);
+}
+
+
+.tf-nav-link:hover::after,
+.tf-nav-link.active::after {
+    transform: scaleX(1);
+}
+
+
+.tf-nav-link.active {
+    color: var(--tf-header-text);
+}
+
+
+/* NUMBER */
+
+.tf-nav-number {
+    color: var(--tf-header-orange);
+
+    font-size: 8px;
+
+    opacity: 0.9;
+}
+
+
+/* ---------------------------------------------------------
+   REPORTS DROPDOWN
+   --------------------------------------------------------- */
+
+.tf-nav-dropdown {
+    position: relative;
+}
+
+
+.tf-dropdown-trigger {
+    width: auto;
+}
+
+
+/* Arrow */
+
+.tf-dropdown-arrow {
+    color: var(--tf-header-orange);
+
+    font-size: 13px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.tf-nav-dropdown.open .tf-dropdown-arrow {
+    transform: rotate(-90deg);
+}
+
+
+/* ---------------------------------------------------------
+   DROPDOWN MENU
+   --------------------------------------------------------- */
+
+.tf-dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 1px);
+    right: 0;
+
+    width: 310px;
+
+    padding: 9px;
+
+    background: #101010;
+
+    border: 1px solid var(--tf-header-border);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-8px);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.tf-nav-dropdown.open .tf-dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* Dropdown heading */
+
+.tf-dropdown-heading {
+    padding: 14px 13px 13px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--tf-header-text);
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+
+    border-bottom: 1px solid var(--tf-header-border);
+}
+
+
+.tf-dropdown-heading span {
+    color: var(--tf-header-orange);
+
+    font-size: 7px;
+
+    letter-spacing: 0.10em;
+}
+
+
+/* Dropdown links */
+
+.tf-dropdown-menu a {
+    min-height: 50px;
+
+    padding: 0 13px;
+
+    display: grid;
+
+    grid-template-columns: 25px 1fr auto;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--tf-header-muted);
+
+    font-size: 8px;
+
+    letter-spacing: 0.07em;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        padding 0.2s ease;
+}
+
+
+.tf-dropdown-menu a:last-child {
+    border-bottom: 0;
+}
+
+
+.tf-dropdown-menu a span {
+    color: var(--tf-header-orange);
+
+    font-size: 8px;
+}
+
+
+.tf-dropdown-menu a b {
+    color: var(--tf-header-dim);
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    transition: color 0.2s ease;
+}
+
+
+.tf-dropdown-menu a:hover {
+    color: var(--tf-header-text);
+
+    background: var(--tf-header-orange-soft);
+
+    padding-left: 17px;
+}
+
+
+.tf-dropdown-menu a:hover b {
+    color: var(--tf-header-orange);
+}
+
+
+/* ---------------------------------------------------------
+   LOGOUT
+   --------------------------------------------------------- */
+
+.tf-logout {
+    height: 82px;
+
+    margin-left: 12px;
+    padding: 0 0 0 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--tf-header-muted);
+
+    font-size: 9px;
+
+    letter-spacing: 0.10em;
+
+    border-left: 1px solid var(--tf-header-border);
+
+    transition: color 0.2s ease;
+}
+
+
+.tf-logout b {
+    color: var(--tf-header-orange);
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.tf-logout:hover {
+    color: var(--tf-header-text);
+}
+
+
+.tf-logout:hover b {
+    transform: translate(3px, -3px);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE BUTTON
+   --------------------------------------------------------- */
+
+.tf-mobile-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: 1px solid var(--tf-header-border);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+.tf-mobile-toggle span {
+    position: absolute;
+
+    left: 12px;
+
+    width: 19px;
+    height: 1px;
+
+    background: var(--tf-header-text);
+
+    transition:
+        transform 0.25s ease,
+        top 0.25s ease;
+}
+
+
+.tf-mobile-toggle span:first-child {
+    top: 17px;
+}
+
+
+.tf-mobile-toggle span:last-child {
+    top: 25px;
+}
+
+
+.tf-mobile-toggle.open span:first-child {
+    top: 21px;
+
+    transform: rotate(45deg);
+}
+
+
+.tf-mobile-toggle.open span:last-child {
+    top: 21px;
+
+    transform: rotate(-45deg);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE MENU
+   --------------------------------------------------------- */
+
+.tf-mobile-menu {
+    display: none;
+
+    border-top: 1px solid var(--tf-header-border);
+
+    background: #0d0d0d;
+}
+
+
+.tf-mobile-menu > a,
+.tf-mobile-report-heading {
+    min-height: 55px;
+
+    padding: 0 5vw;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    color: var(--tf-header-muted);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    font-size: 9px;
+
+    letter-spacing: 0.11em;
+}
+
+
+.tf-mobile-menu > a span,
+.tf-mobile-report-heading span {
+    color: var(--tf-header-orange);
+
+    font-size: 8px;
+}
+
+
+.tf-mobile-menu > a.active {
+    color: var(--tf-header-text);
+
+    background: var(--tf-header-orange-soft);
+}
+
+
+.tf-mobile-report-heading {
+    color: var(--tf-header-text);
+
+    padding-top: 5px;
+}
+
+
+.tf-mobile-sub-link {
+    padding-left: calc(5vw + 30px) !important;
+
+    min-height: 46px !important;
+
+    font-size: 8px !important;
+}
+
+
+.tf-mobile-logout {
+    color: var(--tf-header-orange) !important;
+
+    margin-top: 10px;
+
+    border-top: 1px solid var(--tf-header-border);
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1050px) {
+
+    .tf-admin-nav {
+        padding: 0 4vw;
+    }
+
+    .tf-nav-link {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    .tf-nav-link::after {
+        left: 13px;
+        right: 13px;
+    }
+
+    .tf-brand-label {
+        display: none;
+    }
+
+    .tf-brand-name {
+        font-size: 22px;
+    }
+
+    .tf-logout {
+        padding-left: 17px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+    .tf-admin-nav {
+        min-height: 70px;
+    }
+
+    .tf-admin-brand {
+        height: 70px;
+    }
+
+    .tf-brand-mark {
+        width: 27px;
+        height: 27px;
+    }
+
+    .tf-brand-name {
+        font-size: 21px;
+    }
+
+
+    .tf-nav-right {
+        display: none;
+    }
+
+
+    .tf-mobile-toggle {
+        display: block;
+    }
+
+
+    .tf-mobile-menu.open {
+        display: block;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 450px) {
+
+    .tf-admin-nav {
+        padding: 0 20px;
+    }
+
+    .tf-mobile-menu > a,
+    .tf-mobile-report-heading {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .tf-mobile-sub-link {
+        padding-left: 50px !important;
+    }
+
+}

@@ -28,10 +28,10 @@
 
                 <div class="founder-names">
                     <a href="https://www.instagram.com/jay19050_/" target="_blank" rel="noopener noreferrer">JAY</a>
-                    <i>|</i>
+                    <i aria-hidden="true">|</i>
                     <a href="https://www.instagram.com/swapnil_gavle_08/" target="_blank"
                         rel="noopener noreferrer">SWAPNIL</a>
-                    <i>|</i>
+                    <i aria-hidden="true">|</i>
                     <a href="https://www.instagram.com/parthiv_13_10/" target="_blank"
                         rel="noopener noreferrer">PARTHIV</a>
                 </div>
@@ -71,7 +71,7 @@
             </a>
 
             <a href="tel:+919408663504">
-                +91 9408663504
+                +91&nbsp;9408663504
             </a>
 
         </div>
@@ -85,9 +85,9 @@
                 FOLLOW
             </span>
 
-            <a href="#">INSTAGRAM</a>
-            <a href="#">FACEBOOK</a>
-            <a href="#">LINKEDIN</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow Torque Flow on Instagram">INSTAGRAM</a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow Torque Flow on Facebook">FACEBOOK</a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="Follow Torque Flow on LinkedIn">LINKEDIN</a>
 
         </div>
 
@@ -118,7 +118,7 @@
     <div class="tf-scroll-indicator" aria-label="Page section navigation">
         <span class="tf-nav-label" aria-live="polite">HOME</span>
         <div class="tf-nav-stops"></div>
-        <div class="tf-scroll-track">
+        <div class="tf-scroll-track" aria-hidden="true">
             <div class="tf-scroll-progress"></div>
             <div class="tf-scroll-dot"></div>
         </div>
@@ -135,5 +135,6 @@
     <!-- Lenis Smooth Scroll -->
     <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
     <script src="js/scroll-experience.js?v=4"></script>
+    <script src="js/molten-metal.js?v=1"></script>
 
 </footer>

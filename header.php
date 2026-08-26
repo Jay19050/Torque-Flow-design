@@ -43,6 +43,13 @@ if ($page == "index") {
 
     <link rel="stylesheet" href="css/login.css">
 
+
+    <link rel="stylesheet" href="css/about.css?v=2">
+
+    <link rel="stylesheet" href="css/contact.css?v=1">
+
+    <link rel="stylesheet" href="css/login.css">
+
     <link rel="stylesheet" href="css/services.css">
 
 </head>
@@ -50,7 +57,8 @@ if ($page == "index") {
 
 <body class="page-<?= htmlspecialchars($page, ENT_QUOTES, 'UTF-8') ?>">
 
-    
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- =========================================
          HEADER
@@ -61,14 +69,14 @@ if ($page == "index") {
 
         <!-- LOGO -->
 
-        <div class="logo">
+        <a href="index.php" class="logo" aria-label="Torque Flow Home">
             TORQUE FLOW
-        </div>
+        </a>
 
 
         <!-- MAIN NAVIGATION -->
 
-        <nav>
+        <nav aria-label="Main Navigation">
 
             <a href="index.php" class="<?= ($page == "home") ? "active" : "" ?>">
                 HOME
@@ -106,38 +114,38 @@ if ($page == "index") {
 
             <!-- TRIGGER -->
 
-            <button type="button" class="client-access-trigger" aria-expanded="false">
+            <button type="button" class="client-access-trigger" id="client-access-btn" aria-haspopup="true" aria-expanded="false" aria-controls="client-access-menu">
 
                 <span>CLIENT ACCESS</span>
 
-                <span class="client-access-arrow">↗</span>
+                <span class="client-access-arrow" aria-hidden="true">↗</span>
 
             </button>
 
 
             <!-- DROPDOWN MENU -->
 
-            <div class="client-access-menu">
+            <div class="client-access-menu" id="client-access-menu" role="menu" aria-labelledby="client-access-btn">
 
 
                 <!-- LOGIN -->
 
-                <a href="login.php" class="<?= ($page == "login") ? "active" : "" ?>">
+                <a href="login.php" role="menuitem" class="<?= ($page == "login") ? "active" : "" ?>">
 
                     <span>LOGIN</span>
 
-                    <span>↗</span>
+                    <span aria-hidden="true">↗</span>
 
                 </a>
 
 
                 <!-- REGISTER -->
 
-                <a href="registration.php" class="<?= ($page == "registration") ? "active" : "" ?>">
+                <a href="registration.php" role="menuitem" class="<?= ($page == "registration") ? "active" : "" ?>">
 
                     <span>REGISTER</span>
 
-                    <span>↗</span>
+                    <span aria-hidden="true">↗</span>
 
                 </a>
 

@@ -3,7 +3,7 @@ $page = "services";
 include 'header.php';
 ?>
 
-<main class="services-page">
+<main id="main-content" class="services-page">
 
     <section class="services-hero">
         <div class="services-hero-overlay"></div>
@@ -24,7 +24,8 @@ include 'header.php';
             </p>
 
             <a href="booking.php" class="hero-btn">
-                BOOK A SERVICE
+                <span>BOOK A SERVICE</span>
+                <span aria-hidden="true">↗</span>
             </a>
 
         </div>
@@ -64,31 +65,31 @@ include 'header.php';
             <a href="#oil-service" class="service-row">
                 <div class="service-number">01</div>
                 <h2>OIL SERVICE</h2>
-                <div class="service-arrow">↗</div>
+                <div class="service-arrow" aria-hidden="true">↗</div>
             </a>
 
             <a href="#brake-service" class="service-row">
                 <div class="service-number">02</div>
                 <h2>BRAKE SERVICE</h2>
-                <div class="service-arrow">↗</div>
+                <div class="service-arrow" aria-hidden="true">↗</div>
             </a>
 
             <a href="#wheel-alignment" class="service-row">
                 <div class="service-number">03</div>
                 <h2>WHEEL ALIGNMENT</h2>
-                <div class="service-arrow">↗</div>
+                <div class="service-arrow" aria-hidden="true">↗</div>
             </a>
 
             <a href="#battery-replacement" class="service-row">
                 <div class="service-number">04</div>
                 <h2>BATTERY REPLACEMENT</h2>
-                <div class="service-arrow">↗</div>
+                <div class="service-arrow" aria-hidden="true">↗</div>
             </a>
 
             <a href="#overall-car-service" class="service-row">
                 <div class="service-number">05</div>
                 <h2>OVERALL CAR SERVICE</h2>
-                <div class="service-arrow">↗</div>
+                <div class="service-arrow" aria-hidden="true">↗</div>
             </a>
 
         </div>
@@ -126,7 +127,7 @@ include 'header.php';
         </div>
 
         <div class="service-detail-image">
-            <img src="images/oil-service.png" alt="Oil service">
+            <img src="images/oil-service.png" alt="Oil service" width="1023" height="1537" loading="lazy" decoding="async">
         </div>
 
     </section>
@@ -164,7 +165,7 @@ include 'header.php';
         </div>
 
         <div class="service-detail-image">
-            <img src="images/brake-service.png" alt="Brake service">
+            <img src="images/brake-service.png" alt="Brake service" width="1023" height="1537" loading="lazy" decoding="async">
         </div>
 
     </section>
@@ -201,7 +202,7 @@ include 'header.php';
         </div>
 
         <div class="service-detail-image">
-            <img src="images/wheel-alignment.png" alt="Wheel alignment">
+            <img src="images/wheel-alignment.png" alt="Wheel alignment" width="1023" height="1537" loading="lazy" decoding="async">
         </div>
 
     </section>
@@ -229,7 +230,7 @@ include 'header.php';
                 and powering its electrical systems. We inspect battery
                 condition, charging performance and electrical connections.
                 When replacement is required, we install a suitable battery
-                and make sure the vehicle's starting and charging systems
+                and make sure the vehicle’s starting and charging systems
                 are operating correctly.
             </p>
 
@@ -239,7 +240,7 @@ include 'header.php';
         </div>
 
         <div class="service-detail-image">
-            <img src="images/battery-replacement.png" alt="Battery replacement">
+            <img src="images/battery-replacement.png" alt="Battery replacement" width="1023" height="1537" loading="lazy" decoding="async">
         </div>
 
     </section>
@@ -277,7 +278,7 @@ include 'header.php';
         </div>
 
         <div class="service-detail-image">
-            <img src="images/overall-car-service.png" alt="Overall car service">
+            <img src="images/overall-car-service.png" alt="Overall car service" width="1024" height="1536" loading="lazy" decoding="async">
         </div>
 
     </section>
@@ -293,7 +294,8 @@ include 'header.php';
             Get in touch with Torque Flow.
         </p>
         <a href="contact.php" class="services-cta-button">
-            BOOK A SERVICE ↗
+            <span>BOOK A SERVICE</span>
+            <span aria-hidden="true">↗</span>
         </a>
     </section>
 

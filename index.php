@@ -6,6 +6,8 @@ include("header.php");
 
 ?>
 
+<main id="main-content" class="home-page">
+
 <section class="hero tf-hero" data-scene>
 
     <div class="tf-hero-orbit tf-hero-orbit-one" aria-hidden="true"></div>
@@ -16,7 +18,7 @@ include("header.php");
 
     <div class="hero-title tf-hero-copy" data-depth="0.16">
 
-        <h2>TORQUE FLOW</h2>
+        <h2>TORQUE FLOW TEST</h2>
 
         <p>Premium Vehicle Service</p>
 
@@ -26,7 +28,7 @@ include("header.php");
 
         <span>SCROLL</span>
 
-        <span>↓</span>
+        <span aria-hidden="true">↓</span>
 
     </div>
 
@@ -62,7 +64,7 @@ include("header.php");
             </h2>
 
             <p>
-                We don't treat vehicle servicing as routine.
+                We don’t treat vehicle servicing as routine.
                 Every detail matters when performance,
                 reliability, and your drive come first.
             </p>
@@ -122,7 +124,7 @@ include("header.php");
 
                     <p>
                         Your vehicle receives the same care
-                        we'd expect for our own cars.
+                        we’d expect for our own cars.
                     </p>
 
                 </div>
@@ -190,7 +192,7 @@ include("header.php");
                     tuning, and upgrades.
                 </div>
 
-                <div class="service-item-arrow">
+                <div class="service-item-arrow" aria-hidden="true">
                     ↗
                 </div>
 
@@ -214,7 +216,7 @@ include("header.php");
                     around long-term reliability.
                 </div>
 
-                <div class="service-item-arrow">
+                <div class="service-item-arrow" aria-hidden="true">
                     ↗
                 </div>
 
@@ -238,7 +240,7 @@ include("header.php");
                     what your vehicle really needs.
                 </div>
 
-                <div class="service-item-arrow">
+                <div class="service-item-arrow" aria-hidden="true">
                     ↗
                 </div>
 
@@ -262,7 +264,7 @@ include("header.php");
                     that looks as good as it performs.
                 </div>
 
-                <div class="service-item-arrow">
+                <div class="service-item-arrow" aria-hidden="true">
                     ↗
                 </div>
 
@@ -327,7 +329,7 @@ include("header.php");
                 </div>
 
                 <div class="home-stat-label">
-                    YEARS EXPERIENCE
+                    YEARS&nbsp;EXPERIENCE
                 </div>
 
             </div>
@@ -340,7 +342,7 @@ include("header.php");
                 </div>
 
                 <div class="home-stat-label">
-                    VEHICLES SERVICED
+                    VEHICLES&nbsp;SERVICED
                 </div>
 
             </div>
@@ -353,7 +355,7 @@ include("header.php");
                 </div>
 
                 <div class="home-stat-label">
-                    CUSTOMER SATISFACTION
+                    CUSTOMER&nbsp;SATISFACTION
                 </div>
 
             </div>
@@ -429,7 +431,7 @@ include("header.php");
                         performance-focused service and upgrades.
                     </p>
 
-                    <strong>EXPLORE ↗</strong>
+                    <strong>EXPLORE <span aria-hidden="true">↗</span></strong>
 
                 </div>
 
@@ -453,7 +455,7 @@ include("header.php");
                         around long-term reliability.
                     </p>
 
-                    <strong>EXPLORE ↗</strong>
+                    <strong>EXPLORE <span aria-hidden="true">↗</span></strong>
 
                 </div>
 
@@ -477,7 +479,7 @@ include("header.php");
                         a bigger problem.
                     </p>
 
-                    <strong>EXPLORE ↗</strong>
+                    <strong>EXPLORE <span aria-hidden="true">↗</span></strong>
 
                 </div>
 
@@ -521,7 +523,7 @@ include("header.php");
 
             <a href="booking.php" class="section-five-button">
                 BOOK A SERVICE
-                <span>↗</span>
+                <span aria-hidden="true">↗</span>
             </a>
 
         </div>
@@ -530,6 +532,10 @@ include("header.php");
             <img
                 src="images/standard.png"
                 alt="Torque Flow precision vehicle service"
+                width="3821"
+                height="2158"
+                loading="lazy"
+                decoding="async"
             >
 
             <div class="section-five-image-caption">
@@ -541,6 +547,7 @@ include("header.php");
     </div>
 
 </section>
+</main>
 <?php
 
 include("footer.php");
