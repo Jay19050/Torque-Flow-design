@@ -1,364 +1,258 @@
 /* =========================================================
-   TORQUE FLOW
-   ADMIN FOOTER
-   ========================================================= */
+   TORQUE FLOW / ADMIN FOOTER
+========================================================= */
+
+.tf-admin-footer,
+.tf-admin-footer * {
+    box-sizing: border-box;
+}
 
 .tf-admin-footer {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-
     background: #080808;
-
     color: #f3f1ec;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-
-    font-family:
-        "IBM Plex Mono",
-        "Courier New",
-        monospace;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-
-/* =========================================================
-   TOP SECTION
-   ========================================================= */
+.tf-admin-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 6vw;
+    width: min(34vw, 520px);
+    height: 2px;
+    background: #ff6418;
+}
 
 .tf-admin-footer-top {
-
-    width: 100%;
-
-    padding:
-        70px
-        6vw
-        65px;
-
+    position: relative;
     display: grid;
-
-    grid-template-columns:
-        1.5fr
-        1fr
-        1fr;
-
-    gap: 6vw;
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.10);
+    grid-template-columns: minmax(0, 1.45fr) minmax(180px, 0.7fr) minmax(200px, 0.7fr);
+    gap: clamp(42px, 7vw, 128px);
+    width: min(1500px, 100%);
+    margin: 0 auto;
+    padding: 88px 6vw 76px;
 }
 
-
-/* =========================================================
-   BRAND
-   ========================================================= */
-
-.tf-footer-brand-line {
-
+.tf-footer-brand-meta {
     display: flex;
-
     align-items: center;
-
-    gap: 15px;
+    gap: 18px;
+    color: #ff6418;
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    line-height: 1.2;
 }
-
-
-/* TF MARK */
 
 .tf-footer-mark {
-
-    width: 38px;
-
-    height: 38px;
-
-    display: flex;
-
+    display: inline-flex;
     align-items: center;
-
     justify-content: center;
-
-    border:
-        1px solid #ff6418;
-
+    width: 31px;
+    height: 31px;
+    flex: 0 0 31px;
+    border: 1px solid #ff6418;
     color: #ff6418;
-
     font-family: Arial, sans-serif;
-
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: 700;
-
     transform: rotate(45deg);
 }
 
-
-/* BRAND NAME */
-
-.tf-footer-name {
-
-    font-family:
-        "Arial Narrow",
-        Arial,
-        sans-serif;
-
-    font-size: 30px;
-
-    letter-spacing: 0.08em;
-
-    line-height: 1;
+.tf-footer-mark > span {
+    display: block;
+    transform: rotate(-45deg);
 }
 
+.tf-footer-brand h2 {
+    margin: 31px 0 23px;
+    color: #f3f1ec;
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(38px, 4.1vw, 64px);
+    font-weight: 600;
+    line-height: 0.91;
+    letter-spacing: -0.055em;
+}
 
-/* DESCRIPTION */
+.tf-footer-brand h2 span {
+    color: #ff6418;
+}
 
-.tf-footer-brand p {
-
-    margin:
-
-        24px
-        0
-        0;
-
+.tf-footer-brand p,
+.tf-footer-status p {
     max-width: 360px;
-
-    color:
-        rgba(243, 241, 236, 0.42);
-
-    font-size: 9px;
-
-    line-height: 1.8;
-
-    letter-spacing: 0.13em;
+    margin: 0;
+    color: rgba(243, 241, 236, 0.5);
+    font-size: 13px;
+    line-height: 1.7;
 }
 
-
-/* =========================================================
-   SECTION LABEL
-   ========================================================= */
+.tf-footer-status,
+.tf-footer-navigation {
+    padding-top: 5px;
+}
 
 .tf-footer-status-label {
-
     display: block;
-
-    margin-bottom: 22px;
-
-    color: #ff6418;
-
-    font-size: 8px;
-
-    letter-spacing: 0.16em;
+    margin-bottom: 23px;
+    color: rgba(243, 241, 236, 0.4);
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    line-height: 1.2;
 }
-
-
-/* =========================================================
-   SYSTEM STATUS
-   ========================================================= */
 
 .tf-status-row {
-
     display: flex;
-
     align-items: center;
-
     gap: 10px;
-
-    color:
-        rgba(243, 241, 236, 0.65);
-
-    font-size: 9px;
-
+    margin-bottom: 21px;
+    color: #f3f1ec;
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: 10px;
+    font-weight: 500;
     letter-spacing: 0.08em;
+    line-height: 1.35;
 }
-
-
-/* STATUS DOT */
 
 .tf-status-dot {
-
     width: 7px;
-
     height: 7px;
-
-    display: block;
-
+    flex: 0 0 7px;
     background: #ff6418;
-
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 0 4px rgba(255, 100, 24, 0.10);
+    box-shadow: 0 0 0 4px rgba(255, 100, 24, 0.12);
 }
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
 
 .tf-footer-navigation {
-
     display: flex;
-
     flex-direction: column;
-
-    align-items: flex-start;
+    align-items: stretch;
 }
-
 
 .tf-footer-navigation a {
-
-    width: 100%;
-
-    padding: 11px 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
-    color:
-        rgba(243, 241, 236, 0.52);
-
-    border-bottom:
-        1px solid rgba(255, 255, 255, 0.06);
-
-    font-size: 9px;
-
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(243, 241, 236, 0.72);
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: 10px;
+    font-weight: 500;
     letter-spacing: 0.08em;
-
+    line-height: 1.2;
     text-decoration: none;
-
-    transition:
-        color 0.2s ease,
-        padding 0.2s ease;
+    transition: color 0.2s ease, padding 0.2s ease;
 }
 
+.tf-footer-navigation a:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-.tf-footer-navigation a span {
-
+.tf-footer-navigation a b {
     color: #ff6418;
-
-    font-size: 12px;
-
-    transition:
-        transform 0.2s ease;
+    font-size: 15px;
+    font-weight: 400;
+    transition: transform 0.2s ease;
 }
-
 
 .tf-footer-navigation a:hover {
-
+    padding-left: 8px;
     color: #f3f1ec;
-
-    padding-left: 7px;
 }
 
-
-.tf-footer-navigation a:hover span {
-
-    transform:
-        translate(3px, -3px);
+.tf-footer-navigation a:hover b {
+    transform: translate(3px, -3px);
 }
 
-
-/* =========================================================
-   BOTTOM BAR
-   ========================================================= */
+.tf-footer-navigation a:focus-visible {
+    outline: 2px solid #ff6418;
+    outline-offset: 4px;
+}
 
 .tf-admin-footer-bottom {
-
-    min-height: 55px;
-
-    padding:
-        0
-        6vw;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
-    gap: 20px;
-
-    color:
-        rgba(243, 241, 236, 0.27);
-
-    font-size: 7px;
-
+    gap: 22px;
+    width: min(1500px, 100%);
+    min-height: 64px;
+    margin: 0 auto;
+    padding: 0 6vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(243, 241, 236, 0.3);
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-size: 8px;
+    font-weight: 500;
     letter-spacing: 0.12em;
+    line-height: 1.3;
 }
-
-
-/* Orange separator */
 
 .tf-admin-footer-bottom span:nth-child(2) {
-
-    color:
-        rgba(255, 100, 24, 0.60);
+    color: rgba(255, 100, 24, 0.72);
 }
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
 
 @media (max-width: 900px) {
-
     .tf-admin-footer-top {
-
-        grid-template-columns:
-            1fr 1fr;
-
-        gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        gap: 54px 42px;
+        padding-top: 72px;
     }
 
     .tf-footer-brand {
-
-        grid-column:
-            1 / -1;
+        grid-column: 1 / -1;
     }
 
+    .tf-footer-brand h2 {
+        max-width: 500px;
+    }
 }
 
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 600px) {
+    .tf-admin-footer::before {
+        left: 20px;
+        width: 152px;
+    }
 
     .tf-admin-footer-top {
-
-        padding:
-            50px 25px;
-
-        grid-template-columns:
-            1fr;
-
-        gap: 45px;
+        grid-template-columns: 1fr;
+        gap: 44px;
+        padding: 60px 20px 52px;
     }
-
 
     .tf-footer-brand {
-
-        grid-column:
-            auto;
+        grid-column: auto;
     }
 
-
-    .tf-footer-name {
-
-        font-size: 24px;
+    .tf-footer-brand h2 {
+        margin-top: 27px;
+        font-size: clamp(38px, 13vw, 55px);
     }
 
+    .tf-footer-brand p,
+    .tf-footer-status p {
+        font-size: 12px;
+    }
 
     .tf-admin-footer-bottom {
-
-        padding:
-            20px 25px;
-
-        flex-direction: column;
-
         align-items: flex-start;
-
-        gap: 8px;
+        flex-direction: column;
+        gap: 9px;
+        min-height: 0;
+        padding: 20px;
     }
+}
 
+@media (prefers-reduced-motion: reduce) {
+    .tf-footer-navigation a,
+    .tf-footer-navigation a b {
+        transition: none;
+    }
 }

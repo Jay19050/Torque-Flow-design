@@ -1,6 +1,6 @@
 /*
  * Vanilla WebGL2 adaptation of the Molten Metal effect by React Bits.
- * It is intentionally mounted only on the post-hero sections of index.php.
+ * It is mounted on selected post-hero sections across the site.
  */
 (() => {
     'use strict';
@@ -166,12 +166,15 @@
     };
 
     const init = () => {
-        const page = document.querySelector('.home-page, .services-page');
+        const page = document.querySelector('.home-page, .services-page, .contact-page');
         if (!page || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-        const sections = document.body.classList.contains('page-home')
-            ? '.home-page > section:not(.tf-hero)'
-            : '.services-page > section:not(.services-hero)';
+        let sections = '.contact-details, .contact-form-section';
+        if (document.body.classList.contains('page-home')) {
+            sections = '.home-page > section:not(.tf-hero)';
+        } else if (document.body.classList.contains('page-services')) {
+            sections = '.services-page > section:not(.services-hero)';
+        }
         document.querySelectorAll(sections).forEach(mountMoltenMetal);
     };
 

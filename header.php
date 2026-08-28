@@ -33,7 +33,7 @@ if ($page == "index") {
 
 
 
-    <link rel="stylesheet" href="css/style.css?v=11">
+    <link rel="stylesheet" href="css/style.css?v=12">
 
     <link rel="stylesheet" href="css/hero.css?v=3">
 

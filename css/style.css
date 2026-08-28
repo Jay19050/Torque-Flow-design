@@ -282,11 +282,17 @@ nav a {
 
   font-weight: 500;
 
+  line-height: 1;
+
   letter-spacing: 0.14em;
 
   color: rgba(255, 255, 255, 0.7);
 
   white-space: nowrap;
+}
+
+.footer-column .founder-names a {
+  margin-bottom: 0;
 }
 
 .founder-names i {
@@ -2680,7 +2686,9 @@ html.lenis {
 
 /* Molten Metal background for post-hero home sections. */
 .home-page > section:not(.tf-hero),
-.services-page > section:not(.services-hero) {
+.services-page > section:not(.services-hero),
+.contact-details,
+.contact-form-section {
     isolation: isolate;
 }
 

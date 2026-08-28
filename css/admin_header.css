@@ -133,7 +133,8 @@
 
 /* Counter rotate text */
 
-.tf-brand-mark::first-line {
+.tf-brand-mark > span {
+    display: block;
     transform: rotate(-45deg);
 }
 
@@ -141,13 +142,15 @@
 /* BRAND NAME */
 
 .tf-brand-name {
-    font-family: "Bebas Neue", "Arial Narrow", sans-serif;
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
 
-    font-size: 25px;
+    font-size: 22px;
+
+    font-weight: 700;
 
     line-height: 1;
 
-    letter-spacing: 0.06em;
+    letter-spacing: 0.035em;
 
     white-space: nowrap;
 }
@@ -218,7 +221,7 @@
 
     font-family: "IBM Plex Mono", "Courier New", monospace;
 
-    font-size: 9px;
+    font-size: 10px;
 
     letter-spacing: 0.10em;
 
@@ -270,12 +273,19 @@
 }
 
 
+.tf-admin-header a:focus-visible,
+.tf-admin-header button:focus-visible {
+    outline: 2px solid var(--tf-header-orange);
+    outline-offset: -4px;
+}
+
+
 /* NUMBER */
 
 .tf-nav-number {
     color: var(--tf-header-orange);
 
-    font-size: 8px;
+    font-size: 9px;
 
     opacity: 0.9;
 }
@@ -366,7 +376,7 @@
 
     color: var(--tf-header-text);
 
-    font-size: 9px;
+    font-size: 10px;
 
     letter-spacing: 0.12em;
 
@@ -400,7 +410,7 @@
 
     color: var(--tf-header-muted);
 
-    font-size: 8px;
+    font-size: 9px;
 
     letter-spacing: 0.07em;
 
@@ -467,7 +477,7 @@
 
     color: var(--tf-header-muted);
 
-    font-size: 9px;
+    font-size: 10px;
 
     letter-spacing: 0.10em;
 

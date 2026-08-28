@@ -1,4 +1,8 @@
 <footer class="site-footer">
+    <?php
+    $currentPage = isset($page) ? $page : '';
+    $showScrollNavigator = !in_array($currentPage, ['login', 'registration'], true);
+    ?>
 
 
     <!-- =========================================
@@ -114,27 +118,27 @@
 
     </div>
 
-    <!-- Scroll Progress / Section Navigator -->
-    <div class="tf-scroll-indicator" aria-label="Page section navigation">
-        <span class="tf-nav-label" aria-live="polite">HOME</span>
-        <div class="tf-nav-stops"></div>
-        <div class="tf-scroll-track" aria-hidden="true">
-            <div class="tf-scroll-progress"></div>
-            <div class="tf-scroll-dot"></div>
+    <?php if ($showScrollNavigator): ?>
+        <!-- Scroll Progress / Section Navigator -->
+        <div class="tf-scroll-indicator" aria-label="Page section navigation">
+            <span class="tf-nav-label" aria-live="polite">HOME</span>
+            <div class="tf-nav-stops"></div>
+            <div class="tf-scroll-track" aria-hidden="true">
+                <div class="tf-scroll-progress"></div>
+                <div class="tf-scroll-dot"></div>
+            </div>
         </div>
-    </div>
 
-    
+        <!-- GSAP -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-    <!-- GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+        <!-- GSAP ScrollTrigger -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
-    <!-- GSAP ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-
-    <!-- Lenis Smooth Scroll -->
-    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
-    <script src="js/scroll-experience.js?v=4"></script>
-    <script src="js/molten-metal.js?v=1"></script>
+        <!-- Lenis Smooth Scroll -->
+        <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+        <script src="js/scroll-experience.js?v=4"></script>
+        <script src="js/molten-metal.js?v=1"></script>
+    <?php endif; ?>
 
 </footer>

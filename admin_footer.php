@@ -4,66 +4,43 @@
 
     <div class="tf-admin-footer-top">
 
-        <!-- BRAND -->
         <div class="tf-footer-brand">
-
-            <div class="tf-footer-brand-line">
-
-                <span class="tf-footer-mark">
-                    TF
-                </span>
-
-                <span class="tf-footer-name">
-                    TORQUE FLOW
-                </span>
-
+            <div class="tf-footer-brand-meta">
+                <span class="tf-footer-mark"><span>TF</span></span>
+                <span>TORQUE FLOW / ADMIN CONTROL</span>
             </div>
+
+            <h2>BUILT FOR<br><span>THE WORK.</span></h2>
 
             <p>
-                PRECISION VEHICLE SERVICE MANAGEMENT
+                Operational tools for the service network behind every Torque Flow vehicle experience.
             </p>
-
         </div>
 
-
-        <!-- ADMIN STATUS -->
         <div class="tf-footer-status">
-
-            <span class="tf-footer-status-label">
-                SYSTEM STATUS
-            </span>
+            <span class="tf-footer-status-label">SYSTEM STATUS</span>
 
             <div class="tf-status-row">
-
-                <span class="tf-status-dot"></span>
-
-                <span>
-                    ADMIN PANEL OPERATIONAL
-                </span>
-
+                <span class="tf-status-dot" aria-hidden="true"></span>
+                <span>ADMIN PANEL OPERATIONAL</span>
             </div>
 
+            <p>Manage services, centers, and network operations from one controlled workspace.</p>
         </div>
 
-
-        <!-- ADMIN NAVIGATION -->
-        <div class="tf-footer-navigation">
-
-            <span class="tf-footer-status-label">
-                ADMIN MODULES
-            </span>
+        <nav class="tf-footer-navigation" aria-label="Admin modules">
+            <span class="tf-footer-status-label">ADMIN MODULES</span>
 
             <a href="admin_manage_type.php">
-                SERVICE TYPES
-                <span>↗</span>
+                <span>SERVICE TYPES</span>
+                <b aria-hidden="true">↗</b>
             </a>
 
             <a href="admin_manage_service_center.php">
-                SERVICE CENTERS
-                <span>↗</span>
+                <span>SERVICE CENTERS</span>
+                <b aria-hidden="true">↗</b>
             </a>
-
-        </div>
+        </nav>
 
     </div>
 
@@ -71,17 +48,9 @@
     <!-- BOTTOM BAR -->
     <div class="tf-admin-footer-bottom">
 
-        <span>
-            © 2026 TORQUE FLOW
-        </span>
-
-        <span>
-            ADMINISTRATIVE CONTROL SYSTEM
-        </span>
-
-        <span>
-            INDIA / TF-ADMIN
-        </span>
+        <span>© 2026 TORQUE FLOW</span>
+        <span>ADMINISTRATIVE CONTROL SYSTEM</span>
+        <span>INDIA / TF-ADMIN</span>
 
     </div>
 

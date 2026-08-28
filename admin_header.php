@@ -7,6 +7,12 @@
 
     <title>Torque Flow | Admin</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/admin_header.css">
 </head>
 
@@ -22,7 +28,7 @@
 
         <!-- BRAND -->
         <a href="admin_manage_type.php" class="tf-admin-brand">
-            <span class="tf-brand-mark">TF</span>
+            <span class="tf-brand-mark"><span>TF</span></span>
 
             <span class="tf-brand-name">
                 TORQUE FLOW

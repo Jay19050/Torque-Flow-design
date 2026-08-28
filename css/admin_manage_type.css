@@ -1937,3 +1937,138 @@ body {
     }
 
 }
+
+
+/* =========================================================
+   READABILITY PASS — SERVICE TYPE
+   Frontend-only typography refinement.
+   Backend and form behavior remain unchanged.
+========================================================= */
+
+.tf-admin-page {
+    font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.tf-page-number,
+.tf-kicker,
+.tf-panel-index,
+.tf-panel-status,
+.tf-entry-count,
+.tf-field label,
+.tf-upload-label label,
+.tf-upload-label span,
+.tf-image-meta span,
+.tf-image-meta strong,
+.tf-upload-title,
+.tf-upload-file,
+.tf-primary-action,
+.tf-secondary-action,
+.tf-service-id,
+.tf-db-id,
+.tf-service-price,
+.tf-row-actions a,
+.tf-empty-number {
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+}
+
+.tf-intro-grid h1 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(86px, 10vw, 172px);
+}
+
+.tf-intro-copy p {
+    font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.tf-panel-heading h2 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.tf-field input,
+.tf-field textarea {
+    font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+}
+
+.tf-field textarea {
+    line-height: 1.65;
+}
+
+.tf-service-info h3 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: 33px;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+}
+
+.tf-service-info p {
+    font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.tf-service-price {
+    font-size: 11px;
+}
+
+.tf-row-actions a {
+    font-size: 9px;
+}
+
+.tf-empty-state h3 {
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.tf-empty-state p {
+    font-family: "DM Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+}
+
+@media (max-width: 950px) {
+    .tf-panel-heading h2 {
+        font-size: 32px;
+    }
+
+    .tf-service-info h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+    .tf-intro-grid h1 {
+        font-size: clamp(72px, 20vw, 116px);
+    }
+
+    .tf-panel-heading h2 {
+        font-size: 28px;
+    }
+
+    .tf-service-info h3 {
+        font-size: 25px;
+    }
+
+    .tf-service-info p {
+        font-size: 11px;
+    }
+
+    .tf-primary-action {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tf-intro-grid h1 {
+        font-size: 70px;
+    }
+
+    .tf-service-info h3 {
+        font-size: 23px;
+    }
+}
