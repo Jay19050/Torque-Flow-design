@@ -30,8 +30,15 @@ if(isset($_POST["btnlogin"]))
 
         if(mysqli_num_rows($res2)>0)
         {
+            if(session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
+            $customer_row = mysqli_fetch_assoc($res2);
+            $_SESSION['custid'] = $customer_row['cust_id'];
+
             echo "<script>";
             echo "alert('Client Login Successful');";
+             echo "window.location.href='cust_view_service_type.php';";
             echo "</script>";
         }
         else
@@ -40,8 +47,15 @@ if(isset($_POST["btnlogin"]))
 
             if(mysqli_num_rows($res3)>0)
             {
+                if(session_status() === PHP_SESSION_NONE) {
+                    session_start();
+                }
+                $center_row = mysqli_fetch_assoc($res3);
+                $_SESSION['center_id'] = $center_row['center_id'];
+
                 echo "<script>";
                 echo "alert('Service Center Login Successful');";
+                 echo "window.location.href='center_view_new_booking.php';";
                 echo "</script>";
             }
             else
