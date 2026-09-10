@@ -1,99 +1,170 @@
-TORQUE FLOW
+<div align="center">
 
-Torque Flow is a PHP and MySQL vehicle service booking application. It gives customers a simple way to choose a service, select a service center, describe a vehicle issue, and track the booking. It also gives service centers a focused workspace for reviewing and responding to their own bookings. Administrators manage the service catalogue and service center network.
+# TORQUE FLOW
 
-PROJECT PURPOSE
+### Premium vehicle service booking and service center operations
 
-The project supports the complete service booking journey from service discovery to booking confirmation. The public pages introduce the Torque Flow brand and services. Registered customers can book a service. Service center staff can view new bookings and mark them as confirmed or not confirmed. Administrators can manage the services and centers available to customers.
+<p><strong>PHP</strong> · <strong>MySQL</strong> · <strong>HTML</strong> · <strong>CSS</strong> · <strong>JavaScript</strong></p>
 
-FEATURES
+</div>
 
-The public website includes a home page, services page, about page, contact page, registration page, and login page.
+## Overview
 
-Customer features include registration, login, service browsing, service booking, service center selection, booking date selection, problem descriptions, and booking status tracking.
+Torque Flow is a full-stack vehicle service booking application. It brings customers, service centers, and administrators into one simple workflow: discover a service, make a booking, manage the request, and track its outcome.
 
-Service center features include login, new booking review, booking confirmation, booking rejection, all booking reports, confirmed booking reports, and not confirmed booking reports. Each service center sees bookings assigned to its own center.
+The interface follows a dark, high-contrast automotive visual system with warm orange accents, technical typography, responsive layouts, and clear operational views for every role.
 
-Administrator features include login, service type creation, service type editing, service type deletion, service image upload, service center creation, service center editing, and service center deletion.
+## Experience map
 
-TECHNOLOGY
+```mermaid
+flowchart LR
+    A[Customer] --> B[Browse service types]
+    B --> C[Choose a service center]
+    C --> D[Book a service]
+    D --> E[Service center workspace]
+    E --> F{Review booking}
+    F -->|Confirm| G[Confirmed booking]
+    F -->|Do not confirm| H[Not confirmed booking]
+    G --> I[Customer status page]
+    H --> I
+    J[Administrator] --> K[Manage services]
+    J --> L[Manage service centers]
+    K --> B
+    L --> C
+```
 
-The application uses PHP for server side processing and MySQL for data storage. The interface is built with HTML, CSS, and JavaScript. Google Fonts are used for the Archivo, DM Sans, and IBM Plex Mono typefaces. The project is designed to run on a local PHP environment such as WampServer.
+## Built for three roles
 
-PROJECT STRUCTURE
+| Role | What they can do |
+| --- | --- |
+| Customer | Register, log in, browse services, choose a center, create a booking, and track booking status |
+| Service center | Log in, review new bookings, confirm or decline requests, and view center-specific reports |
+| Administrator | Log in, manage service types, upload service images, and manage the service center network |
 
-index.php is the public home page.
+## Core features
 
-services.php, about.php, and contact.php are the public information pages.
+### Customer portal
 
-registration.php creates customer accounts.
+Customers can explore available service types through image-led service cards, then use the booking screen to select a nearby service center, add a problem description, and choose a preferred date. The booking-status page keeps every customer informed about the current outcome.
 
-login.php authenticates administrators, customers, and service centers. It stores the customer ID and service center ID in the active session after a successful login.
+### Service center workspace
 
-cust_view_service_type.php displays services available for booking.
+Each service center sees only bookings assigned to its own center. New requests can be confirmed or not confirmed, and the reporting area separates all, confirmed, and not confirmed bookings.
 
-cust_book_service.php creates a customer service booking.
+### Administration panel
 
-cust_view_service_booking_status.php displays a customer booking history and its current status.
+Administrators maintain the service catalogue and the service center network. Service records support names, descriptions, pricing, and image uploads. Center records store each location and its login details.
 
-center_view_new_booking.php shows new bookings for the logged in service center.
+## Project structure
 
-center_view_booking_report.php, center_view_confirm_booking_report.php, and center_view_notconfirm_booking_report.php provide service center booking reports.
+```text
+Torque-Flow
+│
+├── Public pages
+│   ├── index.php
+│   ├── services.php
+│   ├── about.php
+│   ├── contact.php
+│   ├── registration.php
+│   └── login.php
+│
+├── Customer portal
+│   ├── cust_view_service_type.php
+│   ├── cust_book_service.php
+│   └── cust_view_service_booking_status.php
+│
+├── Service center portal
+│   ├── center_view_new_booking.php
+│   ├── center_view_booking_report.php
+│   ├── center_view_confirm_booking_report.php
+│   └── center_view_notconfirm_booking_report.php
+│
+├── Administration
+│   ├── admin_manage_type.php
+│   └── admin_manage_service_center.php
+│
+├── Frontend assets
+│   ├── css
+│   ├── js
+│   ├── images
+│   └── type_img
+│
+└── connection.php
+```
 
-admin_manage_type.php manages service types.
+## Local setup
 
-admin_manage_service_center.php manages service centers.
+### Requirements
 
-connection.php contains the MySQL connection settings.
+PHP with MySQLi enabled
 
-css contains the site styles. portal.css and portal_footer.css provide the customer and service center interface theme.
+MySQL or MariaDB
 
-images and type_img contain website and service images.
+Apache or an all-in-one local environment such as WampServer
 
-LOCAL SETUP
+### Start the project
 
-Install and start WampServer or another local stack that includes Apache, PHP, and MySQL.
+1. Start Apache and MySQL from WampServer or your preferred local stack.
+2. Place this project inside the local web root. With WampServer, this is usually the `www` directory.
+3. Create a database named `torque_flow`.
+4. Import the project database structure and starter data.
+5. Confirm the connection values in [connection.php](connection.php).
+6. Open `http://localhost/torque-flow/` in your browser.
 
-Copy the Torque Flow project folder into the web root. For WampServer the usual location is the www directory.
+## Database expectations
 
-Create a MySQL database named torque_flow.
+The application uses the `torque_flow` database and expects the following tables.
 
-Update connection.php if the local database host, username, password, or database name differs from the default local configuration.
+| Table | Responsibility |
+| --- | --- |
+| `admin_detail` | Administrator accounts |
+| `cust_regis` | Customer accounts |
+| `service_center_info` | Service center details and credentials |
+| `type_info` | Service types, descriptions, prices, and images |
+| `service_booking_info` | Booking details, selected center, customer, and status |
 
-Import the project database structure and data. The application expects the admin_detail, cust_regis, service_center_info, type_info, and service_booking_info tables.
+## Booking lifecycle
 
-Start Apache and MySQL, then open the project through the local server using the Torque Flow folder name.
+```mermaid
+stateDiagram-v2
+    [*] --> NewBooking: Customer submits booking
+    NewBooking --> Confirmed: Service center confirms
+    NewBooking --> NotConfirmed: Service center declines
+    Confirmed --> [*]
+    NotConfirmed --> [*]
+```
 
-USER FLOW
+| Status | Meaning |
+| --- | --- |
+| New Booking | Awaiting a response from the chosen service center |
+| Confirmed | The service center accepted the booking |
+| Not Confirmed | The service center declined the booking |
 
-A new customer creates an account on the registration page and logs in from the login page. After login, the customer can choose a service type, select a service center, provide a problem description, choose a date, and submit a booking. The selected service center receives the booking in its new bookings screen.
+## Important session behavior
 
-Service center staff log in with their own credentials. The active session stores their center ID, which filters each booking screen so the center only sees bookings assigned to that location.
+After a successful customer login, the application stores the customer ID in `custid`. This value is used when a booking is created.
 
-Administrators log in to manage services and service centers. These services become available to customers in the booking flow.
+After a successful service-center login, the application stores the center ID in `center_id`. This value filters bookings so each service center sees only requests assigned to its own location.
 
-BOOKING STATUS
+## Development notes
 
-New Booking means a service center has not yet responded.
+Service images uploaded through the administrator panel are saved in the `type_img` directory. The local server must have permission to write to this directory.
 
-Confirm means the service center has accepted the booking.
+This project is designed for local development and learning. Before any public deployment, add password hashing, prepared SQL statements, CSRF protection, server-side authorization checks on protected routes, and environment-based database credentials.
 
-Not Confirm means the service center has declined the booking.
+## Troubleshooting
 
-DEVELOPMENT NOTES
+| Issue | Check |
+| --- | --- |
+| Database connection fails | Confirm MySQL is running, the `torque_flow` database exists, and [connection.php](connection.php) matches the local credentials |
+| Customer booking has no customer ID | Log out and back in so the customer session is refreshed |
+| Center cannot see its bookings | Log out and back in so the current `center_id` session is refreshed |
+| Service image does not display | Confirm the image exists in `type_img` and the stored image path is correct |
 
-The project uses PHP sessions to identify the active customer and service center. A successful customer login must set custid. A successful service center login must set center_id. These values are required when creating and filtering bookings.
+<br>
 
-Service images uploaded by an administrator are stored in the type_img directory. Ensure the local web server has permission to write to this directory when using image upload.
+<div align="center">
 
-The existing implementation is intended for local development and educational use. Before deploying publicly, protect passwords with password hashing, use prepared statements for database access, validate authorization on every protected page, and move database credentials out of source control.
+Built for smoother service experiences.
 
-TROUBLESHOOTING
-
-If the application cannot connect to the database, confirm that MySQL is running, the torque_flow database exists, and the values in connection.php match the local environment.
-
-If a customer booking shows an empty customer ID error, log out and log in again so the customer session is created.
-
-If a service center cannot see bookings assigned to it, log out and log in again so the current center ID is stored in the session.
-
-If service images do not display, confirm that the file exists in type_img and that its stored path is correct.
+</div>
