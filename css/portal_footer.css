@@ -1,7 +1,11 @@
 /* Portal-specific corrections and the shared site footer. */
 .tf-portal-dropdown > .tf-portal-link { height: 82px; }
 .tf-booking-form input[type="date"] { color-scheme: dark; }
-.tf-booking-form input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; filter: invert(1); opacity: 1; }
+.tf-booking-form input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1;
+  filter: invert(48%) sepia(91%) saturate(3153%) hue-rotate(350deg) brightness(101%) contrast(101%);
+}
 
 .site-footer { width: 100%; background: #080808; color: #fff; overflow: hidden; }
 .footer-main { display: grid; grid-template-columns: 2.2fr 1fr 1.35fr 1fr; gap: 70px; padding: 80px 8%; border-top: 1px solid rgba(255,255,255,.09); }
